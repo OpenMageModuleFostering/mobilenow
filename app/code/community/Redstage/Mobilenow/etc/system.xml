@@ -30,7 +30,7 @@
                         </tr>
                          <tr id="current_membership_level_text_row">
                             <td class="label">Current Membership Level:</td>
-                            <td class="value"><strong>No Account Set Up - <a href="https://mobilenowapp.com/pricing" target="_blank">Click here to Get Your Free Account!</strong></a></td>                           
+                            <td class="value"><strong>No Account Set Up - <a href="https://mobilenowapp.com/am/login/index" target="_blank">Click here to Get Your 30 Day Free Trial!</strong></a></td>                           
                         </tr>                         
                     </table>
                 ]]></comment>
@@ -101,7 +101,7 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <comment><![CDATA[
-                        <i>MobileNow v1.0.1 - <a href="https://mobilenowapp.com/am/login/index" style="color:#EA7601">Click Here To Check For Updates</a></i>
+                        <i>MobileNow v1.0.1 - <a href="https://mobilenowapp.com/pricing" style="color:#EA7601">Click Here To Check For Updates</a></i>
                     ]]></comment>
                     <fields>
                         <status translate="label">

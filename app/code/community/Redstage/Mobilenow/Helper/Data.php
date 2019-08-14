@@ -536,15 +536,15 @@ class Redstage_Mobilenow_Helper_Data extends Mage_Core_Helper_Abstract
             {
                 if($configValue==0)
                 {
-                    Mage::getSingleton("adminhtml/session")->addError('No account set up or Mobile Now is inactive. Check System->Configuration->MobileNow to set up your account within the application and check that the system is active.  Sign up for a FREE account at mobilenowapp.com to activate the extension.  If you have already set this up, clear your Magento and browser cache.' ); 
+                    Mage::getSingleton("adminhtml/session")->addError('The MobileNow extension is deactivated or there is no account set up within the configuration settings. Please set up an account within System->Configuration->MobileNow and activate the extension to unlock all of the features in MobileNow.' ); 
                 }
                 elseif($subscriptionstatus->subscritionStatus=='inactive'|| $subscriptionstatus->subscritionStatus=='')
                 {
-                    Mage::getSingleton("adminhtml/session")->addError('There is no account set up in the configuration panel.  Go to mobilenowapp.com to sign up for a free account' );
+                    Mage::getSingleton("adminhtml/session")->addError('There is no account set up within the configuration options. Go to <a target="_blank" href="http://mobilenowapp.com" >http://mobilenowapp.com</a> to get a free account' );
                 }
                 elseif($subscriptionstatus->daysRemaining<=0)
                 {
-                    Mage::getSingleton("adminhtml/session")->addError('Your trial period has expired. Please upgrade your account to a Gold Membership at mobilenowapp.com.' );
+                    Mage::getSingleton("adminhtml/session")->addError('Your free trial period has expired. Please visit <a target="_blank" href="http://mobilenowapp.com" >http://mobilenowapp.com</a> and upgrade your account to the Gold Membership.' );
                 }
                 Mage::app()->getStore()->setConfig($outputPath, true);    
             }
@@ -596,8 +596,7 @@ class Redstage_Mobilenow_Helper_Data extends Mage_Core_Helper_Abstract
             reset($objects);
             rmdir($dir);
         }
-    }
-
+    }    
     
 }	 
 

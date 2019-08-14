@@ -36,6 +36,7 @@
 <?php $helperObj = $this->helper('mobilenow/theme');
        $layout_order =  $helperObj->getThemeData('productlayoutmain');
        $p_show_details = $helperObj->getThemeData('showproductdeails');
+	   $p_show_cart = $helperObj->getThemeData('catalogaddtocart');
  $top_layouts = (array) $layout_order->ptop_layout_settings;
 asort($top_layouts);
 $bottom_layouts = (array) $layout_order->pbottom_layout_settings;
@@ -95,7 +96,7 @@ asort($bottom_layouts);
 				
 				            <?php if (!$this->hasOptions()):?>
 				                <div class="add-to-box">
-				                    <?php if($_product->isSaleable()): ?>
+				                    <?php if($_product->isSaleable() && $p_show_cart->show_add_to_cart ): ?>
 				                        <?php echo $this->getChildHtml('addtocart') ?>
 		  		                    <?php endif; ?>
 		
@@ -121,7 +122,7 @@ asort($bottom_layouts);
 			                </div>
 			            <?php endif; */ ?>
 						<?php if($tkey == 'p_layout_review' && $p_show_details->show_product_reviews_summary) :?>
-			            <div class="clearer small-6 medium-6 large-2 left">
+			            <div class="clearer small-12 medium-6 large-2 left">
 								<?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
 						</div>
 						<?php endif; ?>

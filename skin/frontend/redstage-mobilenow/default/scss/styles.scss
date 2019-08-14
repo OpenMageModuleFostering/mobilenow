@@ -9963,14 +9963,14 @@ $product_layout_color : #000000;
     line-height: 1em;
     margin-top: 4px;
     margin-right: 16px;
-    font-size:.8em;
+   
   }
   h2, .desc a{
-    text-decoration:underline;
+    text-decoration:underline;   
   }
   
   .product-name{
-    /*padding-bottom:25px;*/
+    margin-left:.711111em !important;
   }
 }
 
@@ -10247,6 +10247,13 @@ $product_layout_color : #000000;
        font-size:0.77778em !important;
        font-weight:bold;
     }
+    .rating-box {
+      margin-top:2px;
+      margin-bottom:0px!important;
+    }
+    .rating-links{
+      margin-left:.3em;
+    }
   }
   .product-options {
     .required em, p.required {
@@ -10362,8 +10369,9 @@ $product_layout_color : #000000;
   a {
     font-weight:bold;
     font-size:.5em!important;
+    text-decoration: underline;
   }
-  margin: 4px 0;
+  text-align:center;
   ul {
     list-style-type: none;
     margin: 0;
@@ -10540,11 +10548,16 @@ $product_layout_color : #000000;
   dt {
     font-weight: normal;
     font-size:.77778em;
-       padding-left: 0.33333em;
+    padding-left: 0.33333em;
     padding-right: 0.33333em;
+    margin-top: 8px;
     span {
       font-style: italic;
       margin-right: 8px;
+    }
+    h3 {
+      padding:0px !important;
+      margin:0px !important;
     }
   }
   dd {
@@ -10649,9 +10662,14 @@ $product_layout_color : #000000;
 /* Ratings */
 
 .ratings-table {
+  border: none !important;
   td, th {
     padding: 4px;
     text-align: left;
+    font-size: 1em !important;
+  }
+  .rating-box {
+    font-size: 1em !important;
   }
 }
 
@@ -10680,6 +10698,7 @@ $product_layout_color : #000000;
   position: relative;
   color: #999999;
   margin-bottom:2px;
+  font-size:.8em;
   &:before {
     display: inline-block;
     content: "\f002 \f002 \f002 \f002 \f002";

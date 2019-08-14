@@ -7,21 +7,21 @@
   </modules>
   <frontend>
     <routers>
-      <mobilenow>
-        <use>standard</use>
-          <args>
-            <module>Redstage_Mobilenow</module>
-            <frontName>mobilenow</frontName>
-          </args>
-      </mobilenow>
+        <mobilenow>
+            <use>standard</use>
+            <args>
+                <module>Redstage_Mobilenow</module>
+                <frontName>mobilenow</frontName>
+            </args>
+        </mobilenow>
     </routers>
-		<layout>
-		  <updates>
-			<mobilenow>
-			  <file>mobilenow.xml</file>
-			</mobilenow>
-		  </updates>
-		</layout>
+    <layout>
+        <updates>
+            <mobilenow>
+                <file>mobilenow.xml</file>
+            </mobilenow>
+        </updates>
+    </layout>
   </frontend>
   <global>
     <helpers>

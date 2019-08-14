@@ -24,10 +24,12 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<?php if ($this->getReviewsCount()): ?>
+<?php 
+$show_star = $this->helper('mobilenow/theme')->getThemeData('catalogreviews');
+if ($this->getReviewsCount()): ?>
     <div class="ratings">
-        <?php if ($this->getRatingSummary()):?>
-            <div class="rating-box">
+        <?php if ($this->getRatingSummary() && $show_star->show_review_stars):?>
+            <div class="rating-box left">
                 <div class="rating" style="width:<?php echo $this->getRatingSummary() ?>%"></div>
             </div>
         <?php endif;?>

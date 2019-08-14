@@ -6,7 +6,7 @@ DROP TABLE IF EXISTS {$this->getTable('theme_store_id')};
 DROP TABLE IF EXISTS {$this->getTable('themesubsettings')};
 DROP TABLE IF EXISTS {$this->getTable('themelayoutsettings')};
 DROP TABLE IF EXISTS {$this->getTable('themesettings')};
-CREATE TABLE IF NOT EXISTS `themesettings` (
+CREATE TABLE IF NOT EXISTS {$this->getTable('themesettings')} (
     `theme_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
     `theme_name` varchar(255) NOT NULL,
     `mobile_device_design_interface` int(11) NOT NULL,       
@@ -30,7 +30,7 @@ CREATE TABLE {$this->getTable('theme_store_id')} (
 ALTER TABLE {$this->getTable('theme_store_id')}
     ADD CONSTRAINT `FK_THEME_ID` FOREIGN KEY (`theme_id`) REFERENCES {$this->getTable('themesettings')} (`theme_id`) ON DELETE CASCADE ON UPDATE CASCADE,
     ADD CONSTRAINT `FK_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES {$this->getTable('core_store')} (`store_id`) ON DELETE CASCADE ON UPDATE CASCADE;        
-CREATE TABLE IF NOT EXISTS `themesubsettings` (
+CREATE TABLE IF NOT EXISTS {$this->getTable('themesubsettings')} (
     `id` int(10) NOT NULL AUTO_INCREMENT,
     `defaultsubsetting` int(10) NOT NULL,
     `subsetname` varchar(255) NOT NULL,
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS `themesubsettings` (
     `dateinserted` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-CREATE TABLE IF NOT EXISTS `themelayoutsettings` (
+CREATE TABLE IF NOT EXISTS {$this->getTable('themelayoutsettings')} (
     `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
     `theme_id` int(11) unsigned NOT NULL,
     `layout_link_id` int(10) unsigned NOT NULL,
@@ -85,14 +85,11 @@ CREATE TABLE IF NOT EXISTS `themelayoutsettings` (
     KEY `theme_id` (`theme_id`),
     KEY `layout_link_id` (`layout_link_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-ALTER TABLE `themelayoutsettings`
-    ADD CONSTRAINT `themelayoutsettings_ibfk_2` FOREIGN KEY (`theme_id`) REFERENCES `themesettings` (`theme_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-    ADD CONSTRAINT `themelayoutsettings_ibfk_1` FOREIGN KEY (`layout_link_id`) REFERENCES `core_layout_link` (`layout_link_id`) ON DELETE CASCADE ON UPDATE CASCADE;  
+ALTER TABLE {$this->getTable('themelayoutsettings')}
+    ADD CONSTRAINT `themelayoutsettings_ibfk_2` FOREIGN KEY (`theme_id`) REFERENCES {$this->getTable('themesettings')} (`theme_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+    ADD CONSTRAINT `themelayoutsettings_ibfk_1` FOREIGN KEY (`layout_link_id`) REFERENCES {$this->getTable('core_layout_link')} (`layout_link_id`) ON DELETE CASCADE ON UPDATE CASCADE;  
 SQLTEXT;
 
 $installer->run($sql);
-//demo 
-//Mage::getModel('core/url_rewrite')->setId(null);
-//demo 
 $installer->endSetup();
 

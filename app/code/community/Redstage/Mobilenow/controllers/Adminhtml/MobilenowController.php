@@ -72,13 +72,12 @@ class Redstage_Mobilenow_Adminhtml_MobilenowController extends Mage_Adminhtml_Co
     }
     public function saveAction()
     { 
-       
         $post_data=$this->getRequest()->getPost(); 
         $button_type = $this->getRequest()->getParam('buttontype');
-//        echo '<pre>'; print_r($post_data); echo '</pre>';exit;
-        if($post_data['show_learn_more']!=1)$post_data['show_learn_more']=0;
-        if ($post_data)
-        {
+        //echo '<pre>'; print_r($post_data); echo '</pre>';exit;
+        if (!empty($post_data))
+        {   
+            if($post_data['show_learn_more']!=1)$post_data['show_learn_more']=0;            
             try
             {	
                 $themeSubSettingsModel = Mage::getModel('mobilenow/themesubsettings');
@@ -305,7 +304,8 @@ class Redstage_Mobilenow_Adminhtml_MobilenowController extends Mage_Adminhtml_Co
                 return;                
             }
 
-        }        
+        }
+        $this->_redirect('*/*/');
     }
     public function deleteAction()
     {
@@ -752,7 +752,9 @@ class Redstage_Mobilenow_Adminhtml_MobilenowController extends Mage_Adminhtml_Co
 	    return $css_var_arr;
     }
     public function updatePreviewAction()
-    {        
+    {   
+        if(!Mage::getSingleton('admin/session')->isLoggedIn())
+            $this->_redirectUrl(Mage::helper("adminhtml")->getUrl("admin/index/index/"));
         $post_data=$this->getRequest()->getPost();   
         if($post_data['show_learn_more']!=1)$post_data['show_learn_more']=0;
         if(!isset($post_data['stores']) || count($post_data['stores']) == 0){
@@ -907,5 +909,5 @@ class Redstage_Mobilenow_Adminhtml_MobilenowController extends Mage_Adminhtml_Co
             echo json_encode($data);
             exit;
         }
-    }    
+    }
 }

@@ -9729,7 +9729,6 @@ input.validation-failed, textarea.validation-failed {
   line-height: 1em;
   margin-top: 4px;
   margin-right: 16px;
-  font-size: .8em;
 }
 /* line 9968, ../scss/styles.scss */
 .products-list h2, .products-list .desc a {
@@ -9737,7 +9736,7 @@ input.validation-failed, textarea.validation-failed {
 }
 /* line 9972, ../scss/styles.scss */
 .products-list .product-name {
-  /*padding-bottom:25px;*/
+  margin-left: .711111em !important;
 }
 
 /* Products - Grid */
@@ -10049,43 +10048,52 @@ input.validation-failed, textarea.validation-failed {
   font-size: 0.77778em !important;
   font-weight: bold;
 }
-/* line 10252, ../scss/styles.scss */
+/* line 10250, ../scss/styles.scss */
+.product-view .product-shop .rating-box {
+  margin-top: 2px;
+  margin-bottom: 0px!important;
+}
+/* line 10254, ../scss/styles.scss */
+.product-view .product-shop .rating-links {
+  margin-left: .3em;
+}
+/* line 10259, ../scss/styles.scss */
 .product-view .product-options .required em, .product-view .product-options p.required {
   display: none;
 }
-/* line 10255, ../scss/styles.scss */
+/* line 10262, ../scss/styles.scss */
 .product-view .product-options dl {
   margin-bottom: 0;
 }
-/* line 10258, ../scss/styles.scss */
+/* line 10265, ../scss/styles.scss */
 .product-view .product-options .option {
   padding: 8px 0;
   border-bottom: #d9d9d9 1px solid;
   line-height: 32px;
   *zoom: 1;
 }
-/* line 10263, ../scss/styles.scss */
+/* line 10270, ../scss/styles.scss */
 .product-view .product-options .option:before {
   content: " ";
   display: table;
 }
-/* line 10267, ../scss/styles.scss */
+/* line 10274, ../scss/styles.scss */
 .product-view .product-options .option:after {
   content: " ";
   display: table;
   clear: both;
 }
-/* line 10272, ../scss/styles.scss */
+/* line 10279, ../scss/styles.scss */
 .product-view .product-options .option:first-of-type {
   margin-top: 16px;
   border-top: #d9d9d9 1px solid;
 }
-/* line 10277, ../scss/styles.scss */
+/* line 10284, ../scss/styles.scss */
 .product-view .product-options dd {
   float: left;
   margin-bottom: 0;
 }
-/* line 10281, ../scss/styles.scss */
+/* line 10288, ../scss/styles.scss */
 .product-view .product-options dt {
   float: left;
   margin-bottom: 5px;
@@ -10093,14 +10101,14 @@ input.validation-failed, textarea.validation-failed {
   padding-right: 16px;
   clear: left;
 }
-/* line 10287, ../scss/styles.scss */
+/* line 10294, ../scss/styles.scss */
 .product-view .product-options dt label {
   padding: 0;
   margin: 0;
   font-weight: bold;
   font-size: 0.788em;
 }
-/* line 10294, ../scss/styles.scss */
+/* line 10301, ../scss/styles.scss */
 .product-view .product-options dd {
   float: left;
   clear: right;
@@ -10109,23 +10117,23 @@ input.validation-failed, textarea.validation-failed {
   width: 100%;
   position: relative;
 }
-/* line 10301, ../scss/styles.scss */
+/* line 10308, ../scss/styles.scss */
 .product-view .product-options dd .input-box {
   float: left;
 }
-/* line 10303, ../scss/styles.scss */
+/* line 10310, ../scss/styles.scss */
 .product-view .product-options dd .input-box select {
   max-width: 200px;
 }
-/* line 10307, ../scss/styles.scss */
+/* line 10314, ../scss/styles.scss */
 .product-view .product-options dd .qty-holder {
   float: right;
 }
-/* line 10309, ../scss/styles.scss */
+/* line 10316, ../scss/styles.scss */
 .product-view .product-options dd .qty-holder label {
   display: none;
 }
-/* line 10312, ../scss/styles.scss */
+/* line 10319, ../scss/styles.scss */
 .product-view .product-options dd .qty-holder input.qty {
   position: absolute;
   top: 2px;
@@ -10136,12 +10144,12 @@ input.validation-failed, textarea.validation-failed {
   display: inline-block;
   text-align: center;
 }
-/* line 10331, ../scss/styles.scss */
+/* line 10338, ../scss/styles.scss */
 .product-view .product-collateral .box-description .addTagForm, .product-view .product-collateral .box-additional .addTagForm, .product-view .product-collateral .box-up-sell .addTagForm, .product-view .product-collateral .box-tags .addTagForm, .product-view .product-collateral .block-related .addTagForm, .product-view .product-collateral .box-reviews .addTagForm {
   background: #dbdbdb !important;
   padding: 15px 3px 0 3px;
 }
-/* line 10335, ../scss/styles.scss */
+/* line 10342, ../scss/styles.scss */
 .product-view .product-collateral .box-description .std, .product-view .product-collateral .box-additional .std, .product-view .product-collateral .box-up-sell .std, .product-view .product-collateral .box-tags .std, .product-view .product-collateral .block-related .std, .product-view .product-collateral .box-reviews .std {
   padding-left: 0.33333em;
   padding-right: 0.33333em;
@@ -10149,126 +10157,127 @@ input.validation-failed, textarea.validation-failed {
 }
 
 @media only screen and (min-width: 639px) {
-  /* line 10348, ../scss/styles.scss */
+  /* line 10355, ../scss/styles.scss */
   .product-view .product-shop .add-to-links {
     clear: none;
   }
 }
 /* Up-sell */
-/* line 10355, ../scss/styles.scss */
+/* line 10362, ../scss/styles.scss */
 .box-up-sell ul.products-grid {
   margin-left: 0;
 }
 
 /* Product image/gallery */
-/* line 10361, ../scss/styles.scss */
+/* line 10368, ../scss/styles.scss */
 .product-view .more-views {
-  margin: 4px 0;
+  text-align: center;
 }
-/* line 10362, ../scss/styles.scss */
+/* line 10369, ../scss/styles.scss */
 .product-view .more-views a {
   font-weight: bold;
   font-size: .5em!important;
+  text-decoration: underline;
 }
-/* line 10367, ../scss/styles.scss */
+/* line 10375, ../scss/styles.scss */
 .product-view .more-views ul {
   list-style-type: none;
   margin: 0;
 }
-/* line 10370, ../scss/styles.scss */
+/* line 10378, ../scss/styles.scss */
 .product-view .more-views ul li {
   float: left;
 }
 
 /* Option list (custom options and downloadable) */
-/* line 10378, ../scss/styles.scss */
+/* line 10386, ../scss/styles.scss */
 .options-list li {
   list-style-type: none;
   display: list-item;
   clear: both;
   position: relative;
 }
-/* line 10384, ../scss/styles.scss */
+/* line 10392, ../scss/styles.scss */
 .options-list li input.radio, .options-list li input.checkbox {
   position: absolute;
   left: 0;
   top: 0;
   margin-right: 0.5em;
 }
-/* line 10391, ../scss/styles.scss */
+/* line 10399, ../scss/styles.scss */
 .options-list li .label {
   padding-left: 1.5em;
 }
-/* line 10394, ../scss/styles.scss */
+/* line 10402, ../scss/styles.scss */
 .options-list li label, .options-list li .label {
   line-height: 1em;
   float: left;
   padding-bottom: 2px;
 }
-/* line 10399, ../scss/styles.scss */
+/* line 10407, ../scss/styles.scss */
 .options-list li .price-notice {
   font-size: 0.8em;
   color: #999999;
   padding-top: 4px;
   display: inline-block;
 }
-/* line 10405, ../scss/styles.scss */
+/* line 10413, ../scss/styles.scss */
 .options-list li a {
   display: inline-block;
 }
 
 /* Related products */
-/* line 10412, ../scss/styles.scss */
+/* line 10420, ../scss/styles.scss */
 .block-related {
   *zoom: 1;
   clear: both;
 }
-/* line 10415, ../scss/styles.scss */
+/* line 10423, ../scss/styles.scss */
 .block-related:before {
   content: " ";
   display: table;
 }
-/* line 10419, ../scss/styles.scss */
+/* line 10427, ../scss/styles.scss */
 .block-related:after {
   content: " ";
   display: table;
   clear: both;
 }
-/* line 10424, ../scss/styles.scss */
+/* line 10432, ../scss/styles.scss */
 .block-related .block-content .block-subtitle {
   margin-bottom: 16px;
 }
-/* line 10427, ../scss/styles.scss */
+/* line 10435, ../scss/styles.scss */
 .block-related li.item {
   border: 0;
 }
-/* line 10431, ../scss/styles.scss */
+/* line 10439, ../scss/styles.scss */
 .block-related .product-details .product-name {
   font-size: 1em;
   font-weight: normal;
 }
-/* line 10435, ../scss/styles.scss */
+/* line 10443, ../scss/styles.scss */
 .block-related .product-details .product-image {
   position: relative;
   float: left;
   width: 100px;
 }
-/* line 10440, ../scss/styles.scss */
+/* line 10448, ../scss/styles.scss */
 .block-related .product-details .price-box {
   margin: 0;
   font-size: 1em;
 }
-/* line 10443, ../scss/styles.scss */
+/* line 10451, ../scss/styles.scss */
 .block-related .product-details .price-box .price {
   font-weight: normal;
 }
-/* line 10447, ../scss/styles.scss */
+/* line 10455, ../scss/styles.scss */
 .block-related .product-details .link-wishlist {
   display: none;
 }
 
 /* Additional information table */
-/* line 10455, ../scss/styles.scss */
+/* line 10463, ../scss/styles.scss */
 .box-additional table {
   *zoom: 1;
   width: 98%;
@@ -10277,12 +10286,12 @@ input.validation-failed, textarea.validation-failed {
   /* Still needed some clearfixing? 
   margin-top: 8px;*/
 }
-/* line 10463, ../scss/styles.scss */
+/* line 10471, ../scss/styles.scss */
 .box-additional table:before {
   content: " ";
   display: table;
 }
-/* line 10467, ../scss/styles.scss */
+/* line 10475, ../scss/styles.scss */
 .box-additional table:after {
   content: " ";
   display: table;
@@ -10290,86 +10299,92 @@ input.validation-failed, textarea.validation-failed {
 }
 
 /* Grouped */
-/* line 10476, ../scss/styles.scss */
+/* line 10484, ../scss/styles.scss */
 .grouped-items-table {
   width: 100%;
 }
 
 /* PRODUCT TABS - _product-tabs.scss */
-/* line 10483, ../scss/styles.scss */
+/* line 10491, ../scss/styles.scss */
 .product-tabs .std {
   line-height: 1.5em;
 }
-/* line 10487, ../scss/styles.scss */
+/* line 10495, ../scss/styles.scss */
 .product-tabs.section-container.auto > section > .title {
   font-weight: 400;
   font-size: 16px;
 }
-/* line 10491, ../scss/styles.scss */
+/* line 10499, ../scss/styles.scss */
 .product-tabs.section-container.auto > section > .title a:hover, .product-tabs.section-container.auto > section > .title a:active, .product-tabs.section-container.auto > section > .title a:focus {
   text-decoration: none;
 }
-/* line 10496, ../scss/styles.scss */
+/* line 10504, ../scss/styles.scss */
 .product-tabs.section-container.auto > section.active > .title a {
   color: #222222;
 }
-/* line 10497, ../scss/styles.scss */
+/* line 10505, ../scss/styles.scss */
 .product-tabs.section-container.auto > section.active > .title a:visited {
   color: #222222;
 }
 
 /* TAGS - _tag.scss */
-/* line 10507, ../scss/styles.scss */
+/* line 10515, ../scss/styles.scss */
 .tags-list {
   line-height: 1em;
   list-style-type: none;
 }
-/* line 10510, ../scss/styles.scss */
+/* line 10518, ../scss/styles.scss */
 .tags-list li {
   display: inline-block;
   padding: 1px;
 }
 
 /* REVIEW - _review.scss */
-/* line 10519, ../scss/styles.scss */
+/* line 10527, ../scss/styles.scss */
 .box-reviews .pager {
   *zoom: 1;
   border-bottom: 1px solid #d9d9d9;
   margin-bottom: 16px;
 }
-/* line 10523, ../scss/styles.scss */
+/* line 10531, ../scss/styles.scss */
 .box-reviews .pager:before {
   content: " ";
   display: table;
 }
-/* line 10527, ../scss/styles.scss */
+/* line 10535, ../scss/styles.scss */
 .box-reviews .pager:after {
   content: " ";
   display: table;
   clear: both;
 }
-/* line 10532, ../scss/styles.scss */
+/* line 10540, ../scss/styles.scss */
 .box-reviews .pager select {
   width: auto;
 }
-/* line 10535, ../scss/styles.scss */
+/* line 10543, ../scss/styles.scss */
 .box-reviews .pager label {
   float: left;
   margin-right: 8px;
 }
-/* line 10540, ../scss/styles.scss */
+/* line 10548, ../scss/styles.scss */
 .box-reviews dt {
   font-weight: normal;
   font-size: .77778em;
   padding-left: 0.33333em;
   padding-right: 0.33333em;
+  margin-top: 8px;
 }
-/* line 10545, ../scss/styles.scss */
+/* line 10554, ../scss/styles.scss */
 .box-reviews dt span {
   font-style: italic;
   margin-right: 8px;
 }
-/* line 10550, ../scss/styles.scss */
+/* line 10558, ../scss/styles.scss */
+.box-reviews dt h3 {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+/* line 10563, ../scss/styles.scss */
 .box-reviews dd {
   /* border-color: #d9d9d9;
    background: #f2f2f2;*/
@@ -10379,130 +10394,139 @@ input.validation-failed, textarea.validation-failed {
   font-size: .77778em;
   position: relative;
 }
-/* line 10561, ../scss/styles.scss */
+/* line 10573, ../scss/styles.scss */
 .box-reviews dd > :first-child {
   margin-top: 0;
 }
-/* line 10564, ../scss/styles.scss */
+/* line 10576, ../scss/styles.scss */
 .box-reviews dd > :last-child {
   margin-bottom: 0;
 }
-/* line 10568, ../scss/styles.scss */
+/* line 10580, ../scss/styles.scss */
 .box-reviews dd h1, .box-reviews dd h2, .box-reviews dd h3, .box-reviews dd h4, .box-reviews dd .block-related .block-title {
   color: #222222;
 }
 
-/* line 10574, ../scss/styles.scss */
+/* line 10586, ../scss/styles.scss */
 .block-related .box-reviews dd .block-title {
   color: #222222;
 }
 
-/* line 10579, ../scss/styles.scss */
+/* line 10591, ../scss/styles.scss */
 .box-reviews dd h5, .box-reviews dd h6, .box-reviews dd p {
   color: #222222;
 }
-/* line 10582, ../scss/styles.scss */
+/* line 10594, ../scss/styles.scss */
 .box-reviews dd h1, .box-reviews dd h2, .box-reviews dd h3, .box-reviews dd h4, .box-reviews dd .block-related .block-title {
   line-height: 1;
   margin-bottom: 0.625em;
 }
 
-/* line 10588, ../scss/styles.scss */
+/* line 10600, ../scss/styles.scss */
 .block-related .box-reviews dd .block-title {
   line-height: 1;
   margin-bottom: 0.625em;
 }
 
-/* line 10594, ../scss/styles.scss */
+/* line 10606, ../scss/styles.scss */
 .box-reviews dd h5, .box-reviews dd h6 {
   line-height: 1;
   margin-bottom: 0.625em;
 }
-/* line 10598, ../scss/styles.scss */
+/* line 10610, ../scss/styles.scss */
 .box-reviews dd h1.subheader, .box-reviews dd h2.subheader, .box-reviews dd h3.subheader, .box-reviews dd h4.subheader, .box-reviews dd .block-related .subheader.block-title {
   line-height: 1.4;
 }
 
-/* line 10603, ../scss/styles.scss */
+/* line 10615, ../scss/styles.scss */
 .block-related .box-reviews dd .subheader.block-title {
   line-height: 1.4;
 }
 
-/* line 10609, ../scss/styles.scss */
+/* line 10621, ../scss/styles.scss */
 .box-reviews dl {
   margin-bottom: 0px;
 }
-/* line 10612, ../scss/styles.scss */
+/* line 10624, ../scss/styles.scss */
 .box-reviews dd {
   margin-bottom: 0px;
 }
-/* line 10614, ../scss/styles.scss */
+/* line 10626, ../scss/styles.scss */
 .box-reviews dd h5.subheader, .box-reviews dd h6.subheader {
   line-height: 1.4;
 }
-/* line 10617, ../scss/styles.scss */
+/* line 10629, ../scss/styles.scss */
 .box-reviews dd .date {
   position: absolute;
   right: 8px;
   top: 4px;
 }
-/* line 10623, ../scss/styles.scss */
+/* line 10635, ../scss/styles.scss */
 .box-reviews .form-add fieldset {
   border: 0;
   padding: 0;
   position: relative;
 }
-/* line 10627, ../scss/styles.scss */
+/* line 10639, ../scss/styles.scss */
 .box-reviews .form-add fieldset h3 {
   position: absolute;
   right: 0;
   font-size: 1em;
   font-weight: normal;
 }
-/* line 10632, ../scss/styles.scss */
+/* line 10644, ../scss/styles.scss */
 .box-reviews .form-add fieldset h3 span {
   font-weight: bold;
 }
-/* line 10636, ../scss/styles.scss */
+/* line 10648, ../scss/styles.scss */
 .box-reviews .form-add fieldset h4, .box-reviews .form-add fieldset .block-related .block-title {
   font-size: 1em;
 }
 
-/* line 10642, ../scss/styles.scss */
+/* line 10654, ../scss/styles.scss */
 .block-related .box-reviews .form-add fieldset .block-title {
   font-size: 1em;
 }
 
-/* line 10646, ../scss/styles.scss */
+/* line 10658, ../scss/styles.scss */
 .box-reviews .form-list {
   margin-left: 0;
 }
 
 /* Ratings */
-/* line 10653, ../scss/styles.scss */
+/* line 10664, ../scss/styles.scss */
+.ratings-table {
+  border: none !important;
+}
+/* line 10666, ../scss/styles.scss */
 .ratings-table td, .ratings-table th {
   padding: 4px;
   text-align: left;
+  font-size: 1em !important;
+}
+/* line 10671, ../scss/styles.scss */
+.ratings-table .rating-box {
+  font-size: 1em !important;
 }
 
-/* line 10659, ../scss/styles.scss */
+/* line 10676, ../scss/styles.scss */
 .rating-list {
   list-style-type: none;
   margin: 16px 0;
 }
-/* line 10663, ../scss/styles.scss */
+/* line 10680, ../scss/styles.scss */
 .rating-list li select {
   display: inline-block;
   width: auto;
 }
-/* line 10667, ../scss/styles.scss */
+/* line 10684, ../scss/styles.scss */
 .rating-list li span {
   display: inline-block;
   width: auto;
   min-width: 160px;
 }
 
-/* line 10675, ../scss/styles.scss */
+/* line 10692, ../scss/styles.scss */
 .rating-box {
   height: 1em;
   letter-spacing: 0;
@@ -10511,14 +10535,15 @@ input.validation-failed, textarea.validation-failed {
   position: relative;
   color: #999999;
   margin-bottom: 2px;
+  font-size: .8em;
 }
-/* line 10684, ../scss/styles.scss */
+/* line 10702, ../scss/styles.scss */
 .rating-box:before {
   display: inline-block;
   content: "\f002 \f002 \f002 \f002 \f002";
   /* Five stars */
 }
-/* line 10689, ../scss/styles.scss */
+/* line 10707, ../scss/styles.scss */
 .rating-box .rating {
   position: absolute;
   left: 0;
@@ -10528,20 +10553,20 @@ input.validation-failed, textarea.validation-failed {
   overflow: hidden;
   color: #f2cd00;
 }
-/* line 10697, ../scss/styles.scss */
+/* line 10715, ../scss/styles.scss */
 .rating-box .rating:before {
   content: "\f002 \f002 \f002 \f002 \f002";
   /* Five stars */
 }
 
 /* Ratings - Add rating form */
-/* line 10706, ../scss/styles.scss */
+/* line 10724, ../scss/styles.scss */
 .form-add textarea {
   min-height: 15em;
 }
 
 /* CART - _cart.scss */
-/* line 10712, ../scss/styles.scss */
+/* line 10730, ../scss/styles.scss */
 .cart-empty {
   border-style: solid;
   border-width: 0;
@@ -10550,188 +10575,188 @@ input.validation-failed, textarea.validation-failed {
   padding: 16px;
   background: #f2f2f2;
 }
-/* line 10720, ../scss/styles.scss */
+/* line 10738, ../scss/styles.scss */
 .cart-empty > :first-child {
   margin-top: 0;
 }
-/* line 10723, ../scss/styles.scss */
+/* line 10741, ../scss/styles.scss */
 .cart-empty > :last-child {
   margin-bottom: 0;
 }
-/* line 10727, ../scss/styles.scss */
+/* line 10745, ../scss/styles.scss */
 .cart-empty h1, .cart-empty h2, .cart-empty h3, .cart-empty h4, .cart-empty .block-related .block-title {
   color: #222222;
 }
 
-/* line 10732, ../scss/styles.scss */
+/* line 10750, ../scss/styles.scss */
 .block-related .cart-empty .block-title {
   color: #222222;
 }
 
-/* line 10737, ../scss/styles.scss */
+/* line 10755, ../scss/styles.scss */
 .cart-empty h5, .cart-empty h6, .cart-empty p {
   color: #222222;
 }
-/* line 10740, ../scss/styles.scss */
+/* line 10758, ../scss/styles.scss */
 .cart-empty h1, .cart-empty h2, .cart-empty h3, .cart-empty h4, .cart-empty .block-related .block-title {
   line-height: 1;
   margin-bottom: 0.625em;
 }
 
-/* line 10746, ../scss/styles.scss */
+/* line 10764, ../scss/styles.scss */
 .block-related .cart-empty .block-title {
   line-height: 1;
   margin-bottom: 0.625em;
 }
 
-/* line 10752, ../scss/styles.scss */
+/* line 10770, ../scss/styles.scss */
 .cart-empty h5, .cart-empty h6 {
   line-height: 1;
   margin-bottom: 0.625em;
 }
-/* line 10756, ../scss/styles.scss */
+/* line 10774, ../scss/styles.scss */
 .cart-empty h1.subheader, .cart-empty h2.subheader, .cart-empty h3.subheader, .cart-empty h4.subheader, .cart-empty .block-related .subheader.block-title {
   line-height: 1.4;
 }
 
-/* line 10761, ../scss/styles.scss */
+/* line 10779, ../scss/styles.scss */
 .block-related .cart-empty .subheader.block-title {
   line-height: 1.4;
 }
 
-/* line 10766, ../scss/styles.scss */
+/* line 10784, ../scss/styles.scss */
 .cart-empty h5.subheader, .cart-empty h6.subheader {
   line-height: 1.4;
 }
 
-/* line 10772, ../scss/styles.scss */
+/* line 10790, ../scss/styles.scss */
 .cart fieldset {
   padding: 0;
   margin: 0;
   border: 0;
 }
-/* line 10777, ../scss/styles.scss */
+/* line 10795, ../scss/styles.scss */
 .cart .cart-table {
   /* Not relevant by default. Delete app/design/frontend/polar/default/template/checkout/cart/cart.phtml to get back to standard. */
   width: 100%;
 }
-/* line 10780, ../scss/styles.scss */
+/* line 10798, ../scss/styles.scss */
 .cart .cart-table .btn-update {
   float: right;
 }
-/* line 10784, ../scss/styles.scss */
+/* line 10802, ../scss/styles.scss */
 .cart .cart-table dl dt {
   float: left;
   margin-right: 8px;
 }
-/* line 10787, ../scss/styles.scss */
+/* line 10805, ../scss/styles.scss */
 .cart .cart-table dl dt:after {
   content: ":";
 }
-/* line 10791, ../scss/styles.scss */
+/* line 10809, ../scss/styles.scss */
 .cart .cart-table dl dd {
   margin-bottom: 0.3em;
 }
-/* line 10795, ../scss/styles.scss */
+/* line 10813, ../scss/styles.scss */
 .cart .cart-table tr {
   border-bottom: 1px solid #d9d9d9;
 }
-/* line 10799, ../scss/styles.scss */
+/* line 10817, ../scss/styles.scss */
 .cart img {
   max-width: none;
 }
-/* line 10802, ../scss/styles.scss */
+/* line 10820, ../scss/styles.scss */
 .cart .btn-remove {
   float: right;
 }
-/* line 10807, ../scss/styles.scss */
+/* line 10825, ../scss/styles.scss */
 .cart .cart-collaterals .totals {
   width: auto;
   float: right;
   text-align: right;
 }
-/* line 10811, ../scss/styles.scss */
+/* line 10829, ../scss/styles.scss */
 .cart .cart-collaterals .totals table {
   float: right;
 }
-/* line 10813, ../scss/styles.scss */
+/* line 10831, ../scss/styles.scss */
 .cart .cart-collaterals .totals table td:first-of-type {
   text-align: left;
 }
-/* line 10817, ../scss/styles.scss */
+/* line 10835, ../scss/styles.scss */
 .cart .cart-collaterals .totals .checkout-types {
   display: block;
   clear: both;
 }
-/* line 10821, ../scss/styles.scss */
+/* line 10839, ../scss/styles.scss */
 .cart .cart-collaterals .totals tfoot {
   background-color: transparent;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
 }
-/* line 10827, ../scss/styles.scss */
+/* line 10845, ../scss/styles.scss */
 .cart .cart-collaterals .shipping {
   float: left;
 }
 
 @media only screen and (min-width: 639px) {
-  /* line 10838, ../scss/styles.scss */
+  /* line 10856, ../scss/styles.scss */
   .cart .cart-collaterals .totals table {
     width: auto;
   }
 }
 /* Crosssell */
-/* line 10845, ../scss/styles.scss */
+/* line 10863, ../scss/styles.scss */
 .crosssell {
   margin-bottom: 32px;
   *zoom: 1;
   clear: both;
 }
-/* line 10849, ../scss/styles.scss */
+/* line 10867, ../scss/styles.scss */
 .crosssell:before {
   content: " ";
   display: table;
 }
-/* line 10853, ../scss/styles.scss */
+/* line 10871, ../scss/styles.scss */
 .crosssell:after {
   content: " ";
   display: table;
   clear: both;
 }
-/* line 10858, ../scss/styles.scss */
+/* line 10876, ../scss/styles.scss */
 .crosssell h2 {
   font-weight: 400;
   font-size: 16px;
 }
-/* line 10862, ../scss/styles.scss */
+/* line 10880, ../scss/styles.scss */
 .crosssell .item {
   position: relative;
   padding-bottom: 16px;
   margin-bottom: 16px;
   border-bottom: 1px solid #d9d9d9;
 }
-/* line 10867, ../scss/styles.scss */
+/* line 10885, ../scss/styles.scss */
 .crosssell .item button {
   float: right;
 }
-/* line 10871, ../scss/styles.scss */
+/* line 10889, ../scss/styles.scss */
 .crosssell .product-name {
   min-height: 0;
 }
-/* line 10874, ../scss/styles.scss */
+/* line 10892, ../scss/styles.scss */
 .crosssell .product-image {
   width: 80px;
   position: absolute;
   left: auto;
   top: 0;
 }
-/* line 10880, ../scss/styles.scss */
+/* line 10898, ../scss/styles.scss */
 .crosssell .product-details {
   padding-left: 96px;
 }
 
 @media only screen and (min-width: 639px) {
-  /* line 10886, ../scss/styles.scss */
+  /* line 10904, ../scss/styles.scss */
   .crosssell .item {
     padding-bottom: 0;
     margin-bottom: 0;
@@ -10739,19 +10764,19 @@ input.validation-failed, textarea.validation-failed {
   }
 }
 @media only screen and (min-width: 639px) {
-  /* line 10894, ../scss/styles.scss */
+  /* line 10912, ../scss/styles.scss */
   .crosssell .item button {
     float: left;
     margin-top: 0;
   }
 }
 /* Cart list */
-/* line 10902, ../scss/styles.scss */
+/* line 10920, ../scss/styles.scss */
 .cart-list {
   border-top: 1px solid #d9d9d9;
   padding-top: 16px;
 }
-/* line 10905, ../scss/styles.scss */
+/* line 10923, ../scss/styles.scss */
 .cart-list > li {
   *zoom: 1;
   list-style-type: none;
@@ -10761,58 +10786,58 @@ input.validation-failed, textarea.validation-failed {
   position: relative;
   min-height: 180px;
 }
-/* line 10913, ../scss/styles.scss */
+/* line 10931, ../scss/styles.scss */
 .cart-list > li:before {
   content: " ";
   display: table;
 }
-/* line 10917, ../scss/styles.scss */
+/* line 10935, ../scss/styles.scss */
 .cart-list > li:after {
   content: " ";
   display: table;
   clear: both;
 }
-/* line 10922, ../scss/styles.scss */
+/* line 10940, ../scss/styles.scss */
 .cart-list > li .btn-remove {
   position: absolute;
   top: 0;
   right: 0;
 }
-/* line 10928, ../scss/styles.scss */
+/* line 10946, ../scss/styles.scss */
 .cart-list > li h2 a {
   font-size: .488em !important;
 }
-/* line 10932, ../scss/styles.scss */
+/* line 10950, ../scss/styles.scss */
 .cart-list > li ul, .cart-list > li ol {
   margin-left: 0;
 }
-/* line 10936, ../scss/styles.scss */
+/* line 10954, ../scss/styles.scss */
 .cart-list .product-image {
   float: left;
   margin-right: 16px;
   min-height: 150px;
 }
-/* line 10941, ../scss/styles.scss */
+/* line 10959, ../scss/styles.scss */
 .cart-list .product-info {
   float: left;
   clear: both;
   width: 100%;
 }
-/* line 10946, ../scss/styles.scss */
+/* line 10964, ../scss/styles.scss */
 .cart-list .product-name {
   font-size: 1.4375em;
   margin-top: 0;
   padding-left: 5px;
 }
-/* line 10951, ../scss/styles.scss */
+/* line 10969, ../scss/styles.scss */
 .cart-list .options-icon {
   margin-top: 16px;
 }
-/* line 10953, ../scss/styles.scss */
+/* line 10971, ../scss/styles.scss */
 .cart-list .options-icon:first-of-type {
   margin-top: 0;
 }
-/* line 10957, ../scss/styles.scss */
+/* line 10975, ../scss/styles.scss */
 .cart-list .item-options {
   float: left;
   clear: both;
@@ -10821,80 +10846,80 @@ input.validation-failed, textarea.validation-failed {
   margin-bottom: 0;
   width: 100%;
 }
-/* line 10964, ../scss/styles.scss */
+/* line 10982, ../scss/styles.scss */
 .cart-list .item-options .option {
   float: left;
   margin-right: 16px;
   width: 100%;
 }
-/* line 10968, ../scss/styles.scss */
+/* line 10986, ../scss/styles.scss */
 .cart-list .item-options .option dt, .cart-list .item-options .option dd {
   margin-bottom: 0;
 }
-/* line 10971, ../scss/styles.scss */
+/* line 10989, ../scss/styles.scss */
 .cart-list .item-options .option dt {
   float: left;
   min-width: 100px;
 }
-/* line 10974, ../scss/styles.scss */
+/* line 10992, ../scss/styles.scss */
 .cart-list .item-options .option dt:after {
   content: ":";
 }
-/* line 10978, ../scss/styles.scss */
+/* line 10996, ../scss/styles.scss */
 .cart-list .item-options .option dd {
   float: left;
 }
-/* line 10980, ../scss/styles.scss */
+/* line 10998, ../scss/styles.scss */
 .cart-list .item-options .option dd:before {
   content: ", ";
 }
-/* line 10983, ../scss/styles.scss */
+/* line 11001, ../scss/styles.scss */
 .cart-list .item-options .option dd:first-of-type:before {
   content: "";
 }
-/* line 10988, ../scss/styles.scss */
+/* line 11006, ../scss/styles.scss */
 .cart-list .item-options .link-edit {
   display: none;
 }
-/* line 10992, ../scss/styles.scss */
+/* line 11010, ../scss/styles.scss */
 .cart-list .actions {
   position: absolute;
   top: 8px;
   right: 32px;
 }
-/* line 10996, ../scss/styles.scss */
+/* line 11014, ../scss/styles.scss */
 .cart-list .actions a {
   margin-left: 8px;
 }
-/* line 11000, ../scss/styles.scss */
+/* line 11018, ../scss/styles.scss */
 .cart-list .price-summary {
   position: absolute;
   right: 0;
   top: 28px;
 }
-/* line 11004, ../scss/styles.scss */
+/* line 11022, ../scss/styles.scss */
 .cart-list .price-summary .qty {
   width: 3.5em;
   float: right;
   text-align: center;
   margin-right: 0.5em;
 }
-/* line 11010, ../scss/styles.scss */
+/* line 11028, ../scss/styles.scss */
 .cart-list .price-summary .cart-price {
   float: right;
   clear: both;
   color: #666666;
 }
-/* line 11014, ../scss/styles.scss */
+/* line 11032, ../scss/styles.scss */
 .cart-list .price-summary .cart-price:first-of-type {
   float: right;
   clear: both;
 }
-/* line 11017, ../scss/styles.scss */
+/* line 11035, ../scss/styles.scss */
 .cart-list .price-summary .cart-price:first-of-type:before {
   content: " x ";
 }
-/* line 11021, ../scss/styles.scss */
+/* line 11039, ../scss/styles.scss */
 .cart-list .price-summary .cart-price:last-of-type {
   font-size: 24px;
   border-top: 1px solid #d9d9d9;
@@ -10905,29 +10930,29 @@ input.validation-failed, textarea.validation-failed {
   font-weight: bold;
   text-align: right;
 }
-/* line 11033, ../scss/styles.scss */
+/* line 11051, ../scss/styles.scss */
 .cart-list .price-summary a.cus-wishlist {
   margin-right: 5px;
 }
-/* line 11037, ../scss/styles.scss */
+/* line 11055, ../scss/styles.scss */
 .cart-list .cart-footer {
   min-height: 0;
 }
-/* line 11039, ../scss/styles.scss */
+/* line 11057, ../scss/styles.scss */
 .cart-list .cart-footer .button {
   width: 100%;
 }
-/* line 11041, ../scss/styles.scss */
+/* line 11059, ../scss/styles.scss */
 .cart-list .cart-footer .button:first-of-type {
   margin-bottom: 16px;
 }
-/* line 11045, ../scss/styles.scss */
+/* line 11063, ../scss/styles.scss */
 .cart-list .cart-footer .btn-update {
   float: right;
 }
 
 @media only screen and (min-width: 639px) {
-  /* line 11052, ../scss/styles.scss */
+  /* line 11070, ../scss/styles.scss */
   .cart-list .product-image {
     position: absolute;
     left: 0;
@@ -10935,7 +10960,7 @@ input.validation-failed, textarea.validation-failed {
   }
 }
 @media only screen and (min-width: 639px) {
-  /* line 11060, ../scss/styles.scss */
+  /* line 11078, ../scss/styles.scss */
   .cart-list .product-info {
     padding-right: 150px;
     padding-left: 150px;
@@ -10944,7 +10969,7 @@ input.validation-failed, textarea.validation-failed {
   }
 }
 @media only screen and (min-width: 639px) {
-  /* line 11069, ../scss/styles.scss */
+  /* line 11087, ../scss/styles.scss */
   .cart-list .item-options {
     padding: 0;
     background-color: transparent;
@@ -10952,92 +10977,92 @@ input.validation-failed, textarea.validation-failed {
   }
 }
 @media only screen and (min-width: 639px) {
-  /* line 11077, ../scss/styles.scss */
+  /* line 11095, ../scss/styles.scss */
   .cart-list .cart-footer .button {
     width: auto;
   }
-  /* line 11079, ../scss/styles.scss */
+  /* line 11097, ../scss/styles.scss */
   .cart-list .cart-footer .button:first-of-type {
     margin-bottom: 0;
   }
 }
 /* Checkout */
-/* line 11087, ../scss/styles.scss */
+/* line 11105, ../scss/styles.scss */
 .one-column-checkout {
   max-width: 639px;
 }
-/* line 11089, ../scss/styles.scss */
+/* line 11107, ../scss/styles.scss */
 .one-column-checkout .header-container {
   margin-top: 0;
 }
-/* line 11091, ../scss/styles.scss */
+/* line 11109, ../scss/styles.scss */
 .one-column-checkout .header-container .header {
   margin: 0;
   padding: 0;
 }
-/* line 11094, ../scss/styles.scss */
+/* line 11112, ../scss/styles.scss */
 .one-column-checkout .header-container .header .logo {
   margin: 0;
 }
 
 /* Horizontal mode, standard */
-/* line 11103, ../scss/styles.scss */
+/* line 11121, ../scss/styles.scss */
 .opc {
   list-style-type: none;
 }
-/* line 11106, ../scss/styles.scss */
+/* line 11124, ../scss/styles.scss */
 .opc > li .step-title {
   background-color: #999999;
   color: white;
   padding: 0 8px;
   cursor: pointer;
 }
-/* line 11111, ../scss/styles.scss */
+/* line 11129, ../scss/styles.scss */
 .opc > li .step-title h2 {
   position: relative;
   font-weight: normal;
   font-size: 24px;
   line-height: 1.5em;
 }
-/* line 11116, ../scss/styles.scss */
+/* line 11134, ../scss/styles.scss */
 .opc > li .step-title h2 .number {
   position: absolute;
   right: 0;
   color: white;
 }
-/* line 11121, ../scss/styles.scss */
+/* line 11139, ../scss/styles.scss */
 .opc > li .step-title h2 a {
   text-decoration: none;
   color: white;
 }
-/* line 11122, ../scss/styles.scss */
+/* line 11140, ../scss/styles.scss */
 .opc > li .step-title h2 a:hover, .opc > li .step-title h2 a:active, .opc > li .step-title h2 a:focus, .opc > li .step-title h2 a:visited {
   text-decoration: none;
   color: white;
 }
-/* line 11131, ../scss/styles.scss */
+/* line 11149, ../scss/styles.scss */
 .opc > li .step {
   background-color: #f2f2f2;
   padding: 16px;
 }
-/* line 11135, ../scss/styles.scss */
+/* line 11153, ../scss/styles.scss */
 .opc > li.allow .step-title {
   background-color: #999999;
 }
-/* line 11139, ../scss/styles.scss */
+/* line 11157, ../scss/styles.scss */
 .opc fieldset {
   border: 0;
   padding: 0;
 }
-/* line 11143, ../scss/styles.scss */
+/* line 11161, ../scss/styles.scss */
 .opc ul.form-list {
   margin-left: 0;
 }
-/* line 11145, ../scss/styles.scss */
+/* line 11163, ../scss/styles.scss */
 .opc ul.form-list ul {
   margin-left: 0;
 }
-/* line 11149, ../scss/styles.scss */
+/* line 11167, ../scss/styles.scss */
 .opc .buttons-set {
   margin: 1em 0;
 }
@@ -11186,7 +11211,7 @@ input.validation-failed, textarea.validation-failed {
   }
 } */
 /* Multiple address checkout */
-/* line 11299, ../scss/styles.scss */
+/* line 11317, ../scss/styles.scss */
 .checkout-progress {
   list-style: none;
   border-style: solid;
@@ -11197,97 +11222,97 @@ input.validation-failed, textarea.validation-failed {
   background: #f2f2f2;
   margin: 0;
 }
-/* line 11309, ../scss/styles.scss */
+/* line 11327, ../scss/styles.scss */
 .checkout-progress > :first-child {
   margin-top: 0;
 }
-/* line 11312, ../scss/styles.scss */
+/* line 11330, ../scss/styles.scss */
 .checkout-progress > :last-child {
   margin-bottom: 0;
 }
-/* line 11316, ../scss/styles.scss */
+/* line 11334, ../scss/styles.scss */
 .checkout-progress h1, .checkout-progress h2, .checkout-progress h3, .checkout-progress h4, .checkout-progress .block-related .block-title {
   color: #222222;
 }
 
-/* line 11321, ../scss/styles.scss */
+/* line 11339, ../scss/styles.scss */
 .block-related .checkout-progress .block-title {
   color: #222222;
 }
 
-/* line 11326, ../scss/styles.scss */
+/* line 11344, ../scss/styles.scss */
 .checkout-progress h5, .checkout-progress h6, .checkout-progress p {
   color: #222222;
 }
-/* line 11329, ../scss/styles.scss */
+/* line 11347, ../scss/styles.scss */
 .checkout-progress h1, .checkout-progress h2, .checkout-progress h3, .checkout-progress h4, .checkout-progress .block-related .block-title {
   line-height: 1;
   margin-bottom: 0.625em;
 }
 
-/* line 11335, ../scss/styles.scss */
+/* line 11353, ../scss/styles.scss */
 .block-related .checkout-progress .block-title {
   line-height: 1;
   margin-bottom: 0.625em;
 }
 
-/* line 11341, ../scss/styles.scss */
+/* line 11359, ../scss/styles.scss */
 .checkout-progress h5, .checkout-progress h6 {
   line-height: 1;
   margin-bottom: 0.625em;
 }
-/* line 11345, ../scss/styles.scss */
+/* line 11363, ../scss/styles.scss */
 .checkout-progress h1.subheader, .checkout-progress h2.subheader, .checkout-progress h3.subheader, .checkout-progress h4.subheader, .checkout-progress .block-related .subheader.block-title {
   line-height: 1.4;
 }
 
-/* line 11350, ../scss/styles.scss */
+/* line 11368, ../scss/styles.scss */
 .block-related .checkout-progress .subheader.block-title {
   line-height: 1.4;
 }
 
-/* line 11355, ../scss/styles.scss */
+/* line 11373, ../scss/styles.scss */
 .checkout-progress h5.subheader, .checkout-progress h6.subheader {
   line-height: 1.4;
 }
-/* line 11358, ../scss/styles.scss */
+/* line 11376, ../scss/styles.scss */
 .checkout-progress li {
   display: inline-block;
   padding: 8px;
 }
-/* line 11361, ../scss/styles.scss */
+/* line 11379, ../scss/styles.scss */
 .checkout-progress li.active {
   background-color: #666666;
   color: white;
 }
 
 /* WISHLIST - _wishlist.scss */
-/* line 11371, ../scss/styles.scss */
+/* line 11389, ../scss/styles.scss */
 .my-wishlist fieldset {
   border: 0;
   padding: 0;
   margin: 0;
 }
-/* line 11377, ../scss/styles.scss */
+/* line 11395, ../scss/styles.scss */
 .my-wishlist .buttons-set button, .my-wishlist .buttons-set .button {
   width: 100%;
   margin-left: 0;
 }
 
 @media only screen and (min-width: 639px) {
-  /* line 11386, ../scss/styles.scss */
+  /* line 11404, ../scss/styles.scss */
   .my-wishlist .buttons-set button, .my-wishlist .buttons-set .button {
     width: auto;
     margin-left: 10px;
   }
 }
-/* line 11393, ../scss/styles.scss */
+/* line 11411, ../scss/styles.scss */
 .wishlist-list {
   /* For the new markup based on list and not table */
   border-top: 1px solid #d9d9d9;
   padding-top: 16px;
 }
-/* line 11397, ../scss/styles.scss */
+/* line 11415, ../scss/styles.scss */
 .wishlist-list > li {
   *zoom: 1;
   list-style-type: none;
@@ -11297,46 +11322,46 @@ input.validation-failed, textarea.validation-failed {
   position: relative;
   min-height: 150px;
 }
-/* line 11405, ../scss/styles.scss */
+/* line 11423, ../scss/styles.scss */
 .wishlist-list > li:before {
   content: " ";
   display: table;
 }
-/* line 11409, ../scss/styles.scss */
+/* line 11427, ../scss/styles.scss */
 .wishlist-list > li:after {
   content: " ";
   display: table;
   clear: both;
 }
-/* line 11414, ../scss/styles.scss */
+/* line 11432, ../scss/styles.scss */
 .wishlist-list > li .btn-remove {
   position: absolute;
   top: 0;
   right: 0;
 }
-/* line 11419, ../scss/styles.scss */
+/* line 11437, ../scss/styles.scss */
 .wishlist-list > li .product-image {
   float: left;
   margin: 0 16px 16px 0;
 }
-/* line 11423, ../scss/styles.scss */
+/* line 11441, ../scss/styles.scss */
 .wishlist-list > li h3.product-name {
   padding-right: 65px;
   font-size: 16px;
 }
-/* line 11427, ../scss/styles.scss */
+/* line 11445, ../scss/styles.scss */
 .wishlist-list > li .description {
   margin-bottom: 16px;
 }
-/* line 11430, ../scss/styles.scss */
+/* line 11448, ../scss/styles.scss */
 .wishlist-list > li .add-to-cart-alt {
   float: right;
 }
-/* line 11432, ../scss/styles.scss */
+/* line 11450, ../scss/styles.scss */
 .wishlist-list > li .add-to-cart-alt input, .wishlist-list > li .add-to-cart-alt button {
   float: left;
 }
-/* line 11435, ../scss/styles.scss */
+/* line 11453, ../scss/styles.scss */
 .wishlist-list > li .add-to-cart-alt .qty {
   display: block;
   float: left;
@@ -11345,28 +11370,28 @@ input.validation-failed, textarea.validation-failed {
   margin-right: 16px;
   text-align: center;
 }
-/* line 11444, ../scss/styles.scss */
+/* line 11462, ../scss/styles.scss */
 .wishlist-list > li .price-box {
   float: left;
 }
-/* line 11447, ../scss/styles.scss */
+/* line 11465, ../scss/styles.scss */
 .wishlist-list > li .truncated {
   *zoom: 1;
   clear: both;
   display: none;
 }
-/* line 11451, ../scss/styles.scss */
+/* line 11469, ../scss/styles.scss */
 .wishlist-list > li .truncated:before {
   content: " ";
   display: table;
 }
-/* line 11455, ../scss/styles.scss */
+/* line 11473, ../scss/styles.scss */
 .wishlist-list > li .truncated:after {
   content: " ";
   display: table;
   clear: both;
 }
-/* line 11461, ../scss/styles.scss */
+/* line 11479, ../scss/styles.scss */
 .wishlist-list > li .link-edit {
   display: none;
   /* The function is to hard to comprehend, so we simply don't want to show it */
@@ -11374,141 +11399,141 @@ input.validation-failed, textarea.validation-failed {
   right: 24px;
   top: 8px;
 }
-/* line 11468, ../scss/styles.scss */
+/* line 11486, ../scss/styles.scss */
 .wishlist-list > li p {
   margin: 0;
 }
 
 /* Wishlist table styles if you choose not to use the new markup */
-/* line 11477, ../scss/styles.scss */
+/* line 11495, ../scss/styles.scss */
 #wishlist-table .product-name {
   font-size: 16px;
 }
-/* line 11480, ../scss/styles.scss */
+/* line 11498, ../scss/styles.scss */
 #wishlist-table textarea {
   width: 100%;
   min-height: 80px;
 }
-/* line 11484, ../scss/styles.scss */
+/* line 11502, ../scss/styles.scss */
 #wishlist-table p {
   *zoom: 1;
 }
-/* line 11486, ../scss/styles.scss */
+/* line 11504, ../scss/styles.scss */
 #wishlist-table p:before {
   content: " ";
   display: table;
 }
-/* line 11490, ../scss/styles.scss */
+/* line 11508, ../scss/styles.scss */
 #wishlist-table p:after {
   content: " ";
   display: table;
   clear: both;
 }
-/* line 11496, ../scss/styles.scss */
+/* line 11514, ../scss/styles.scss */
 #wishlist-table .inner {
   margin-bottom: 8px;
 }
-/* line 11500, ../scss/styles.scss */
+/* line 11518, ../scss/styles.scss */
 #wishlist-table tbody tr {
   border-bottom: 1px solid #d9d9d9;
 }
-/* line 11503, ../scss/styles.scss */
+/* line 11521, ../scss/styles.scss */
 #wishlist-table tbody td {
   padding: 24px;
   vertical-align: top;
 }
-/* line 11506, ../scss/styles.scss */
+/* line 11524, ../scss/styles.scss */
 #wishlist-table tbody td:first-child {
   width: 113px;
   /* Default wishlist thumbnail size in Magento */
 }
-/* line 11510, ../scss/styles.scss */
+/* line 11528, ../scss/styles.scss */
 #wishlist-table tbody td:nth-child(2) {
   min-width: 240px;
 }
-/* line 11514, ../scss/styles.scss */
+/* line 11532, ../scss/styles.scss */
 #wishlist-table tbody .cart-cell {
   width: 100%;
   margin-bottom: 8px;
   min-width: 240px;
 }
-/* line 11518, ../scss/styles.scss */
+/* line 11536, ../scss/styles.scss */
 #wishlist-table tbody .cart-cell a {
   text-decoration: underline;
 }
-/* line 11520, ../scss/styles.scss */
+/* line 11538, ../scss/styles.scss */
 #wishlist-table tbody .cart-cell a:hover, #wishlist-table tbody .cart-cell a:active {
   text-decoration: none;
 }
-/* line 11524, ../scss/styles.scss */
+/* line 11542, ../scss/styles.scss */
 #wishlist-table tbody .cart-cell .item-options dl {
   *zoom: 1;
 }
-/* line 11526, ../scss/styles.scss */
+/* line 11544, ../scss/styles.scss */
 #wishlist-table tbody .cart-cell .item-options dl:before {
   content: " ";
   display: table;
 }
-/* line 11530, ../scss/styles.scss */
+/* line 11548, ../scss/styles.scss */
 #wishlist-table tbody .cart-cell .item-options dl:after {
   content: " ";
   display: table;
   clear: both;
 }
-/* line 11535, ../scss/styles.scss */
+/* line 11553, ../scss/styles.scss */
 #wishlist-table tbody .cart-cell .item-options dl dd {
   float: left;
   width: auto;
 }
-/* line 11539, ../scss/styles.scss */
+/* line 11557, ../scss/styles.scss */
 #wishlist-table tbody .cart-cell .item-options dl dt {
   float: left;
   width: auto;
   margin-right: 8px;
   clear: left;
 }
-/* line 11544, ../scss/styles.scss */
+/* line 11562, ../scss/styles.scss */
 #wishlist-table tbody .cart-cell .item-options dl dt:after {
   content: ":";
 }
-/* line 11549, ../scss/styles.scss */
+/* line 11567, ../scss/styles.scss */
 #wishlist-table tbody .cart-cell .details {
   *zoom: 1;
 }
-/* line 11551, ../scss/styles.scss */
+/* line 11569, ../scss/styles.scss */
 #wishlist-table tbody .cart-cell .details:before {
   content: " ";
   display: table;
 }
-/* line 11555, ../scss/styles.scss */
+/* line 11573, ../scss/styles.scss */
 #wishlist-table tbody .cart-cell .details:after {
   content: " ";
   display: table;
   clear: both;
 }
-/* line 11563, ../scss/styles.scss */
+/* line 11581, ../scss/styles.scss */
 #wishlist-table .price-box {
   margin-bottom: 8px;
   font-size: 16px;
 }
-/* line 11567, ../scss/styles.scss */
+/* line 11585, ../scss/styles.scss */
 #wishlist-table .add-to-cart-alt {
   *zoom: 1;
   margin-bottom: 8px;
   margin-top: 5px;
 }
-/* line 11571, ../scss/styles.scss */
+/* line 11589, ../scss/styles.scss */
 #wishlist-table .add-to-cart-alt:before {
   content: " ";
   display: table;
 }
-/* line 11575, ../scss/styles.scss */
+/* line 11593, ../scss/styles.scss */
 #wishlist-table .add-to-cart-alt:after {
   content: " ";
   display: table;
   clear: both;
 }
-/* line 11581, ../scss/styles.scss */
+/* line 11599, ../scss/styles.scss */
 #wishlist-table .qty {
   display: block;
   float: left;
@@ -11519,7 +11544,7 @@ input.validation-failed, textarea.validation-failed {
 
 /* Wishlist right col */
 /* See also _products-list.scss for the styling of the mini-product-list */
-/* line 11593, ../scss/styles.scss */
+/* line 11611, ../scss/styles.scss */
 .block-wishlist .actions a {
   border-style: solid;
   border-width: 0;
@@ -11541,104 +11566,104 @@ input.validation-failed, textarea.validation-failed {
   border-color: #2284a1;
   color: white;
 }
-/* line 11613, ../scss/styles.scss */
+/* line 11631, ../scss/styles.scss */
 .block-wishlist .actions a:hover, .block-wishlist .actions a:focus {
   background-color: #2284a1;
 }
-/* line 11616, ../scss/styles.scss */
+/* line 11634, ../scss/styles.scss */
 .block-wishlist .actions a:hover, .block-wishlist .actions a:focus {
   color: white;
 }
 
 /* ACCOUNT - _account.scss */
 /* Login */
-/* line 11624, ../scss/styles.scss */
+/* line 11642, ../scss/styles.scss */
 .customer-account-login .col2-set .buttons-set {
   text-align: right;
 }
 
-/* line 11630, ../scss/styles.scss */
+/* line 11648, ../scss/styles.scss */
 .account-login .page-title h1, .account-create .page-title h1, .dashboard .page-title h1, .my-account .page-title h1 {
   background-color: #dbdbdb;
   margin-top: 2px;
   padding: 6px;
 }
-/* line 11638, ../scss/styles.scss */
+/* line 11656, ../scss/styles.scss */
 .account-login .box-head h2, .account-create .box-head h2, .dashboard .box-head h2, .my-account .box-head h2 {
   padding-left: 10px;
 }
-/* line 11643, ../scss/styles.scss */
+/* line 11661, ../scss/styles.scss */
 .account-login .box, .account-login .order-info-box, .account-login .order-info, .account-login .order-date, .account-login .order-details, .account-create .box, .account-create .order-info-box, .account-create .order-info, .account-create .order-date, .account-create .order-details, .dashboard .box, .dashboard .order-info-box, .dashboard .order-info, .dashboard .order-date, .dashboard .order-details, .my-account .box, .my-account .order-info-box, .my-account .order-info, .my-account .order-date, .my-account .order-details {
   padding-left: 5px;
 }
-/* line 11647, ../scss/styles.scss */
+/* line 11665, ../scss/styles.scss */
 .account-login .box-title h2, .account-create .box-title h2, .dashboard .box-title h2, .my-account .box-title h2 {
   font-size: 1.6875em;
 }
-/* line 11652, ../scss/styles.scss */
+/* line 11670, ../scss/styles.scss */
 .account-login .box-content, .account-create .box-content, .dashboard .box-content, .my-account .box-content {
   text-align: left;
 }
-/* line 11655, ../scss/styles.scss */
+/* line 11673, ../scss/styles.scss */
 .account-login .box-content address, .account-create .box-content address, .dashboard .box-content address, .my-account .box-content address {
   text-align: left;
 }
 
-/* line 11663, ../scss/styles.scss */
+/* line 11681, ../scss/styles.scss */
 .col-main .my-account {
   padding-top: 1em;
 }
 
 /* My account */
-/* line 11670, ../scss/styles.scss */
+/* line 11688, ../scss/styles.scss */
 .my-account .page-title {
   margin: 0 0 0.5em;
   overflow: auto;
   /* Clear fix */
 }
-/* line 11674, ../scss/styles.scss */
+/* line 11692, ../scss/styles.scss */
 .my-account .page-title.title-buttons {
   text-align: right;
 }
-/* line 11676, ../scss/styles.scss */
+/* line 11694, ../scss/styles.scss */
 .my-account .page-title.title-buttons h1 {
   text-align: left;
 }
-/* line 11680, ../scss/styles.scss */
+/* line 11698, ../scss/styles.scss */
 .my-account .page-title h1 {
   float: left;
   clear: none;
   width: 100%;
 }
-/* line 11686, ../scss/styles.scss */
+/* line 11704, ../scss/styles.scss */
 .my-account .data-table {
   width: 100%;
   background-color: transparent;
 }
-/* line 11689, ../scss/styles.scss */
+/* line 11707, ../scss/styles.scss */
 .my-account .data-table td.last {
   white-space: nowrap;
 }
-/* line 11693, ../scss/styles.scss */
+/* line 11711, ../scss/styles.scss */
 .my-account .buttons-set {
   *zoom: 1;
 }
-/* line 11695, ../scss/styles.scss */
+/* line 11713, ../scss/styles.scss */
 .my-account .buttons-set:before {
   content: " ";
   display: table;
 }
-/* line 11699, ../scss/styles.scss */
+/* line 11717, ../scss/styles.scss */
 .my-account .buttons-set:after {
   content: " ";
   display: table;
   clear: both;
 }
-/* line 11704, ../scss/styles.scss */
+/* line 11722, ../scss/styles.scss */
 .my-account .buttons-set button {
   margin-left: 10px;
 }
-/* line 11707, ../scss/styles.scss */
+/* line 11725, ../scss/styles.scss */
 .my-account .buttons-set .back-link {
   float: left;
   width: auto;
@@ -11646,11 +11671,11 @@ input.validation-failed, textarea.validation-failed {
   padding: 6px 0;
   padding: 0;
 }
-/* line 11715, ../scss/styles.scss */
+/* line 11733, ../scss/styles.scss */
 .my-account ol {
   list-style-type: none;
 }
-/* line 11718, ../scss/styles.scss */
+/* line 11736, ../scss/styles.scss */
 .my-account .addresses-list .item {
   border-style: solid;
   border-width: 0;
@@ -11659,62 +11684,62 @@ input.validation-failed, textarea.validation-failed {
   padding: 16px;
   background: #f2f2f2;
 }
-/* line 11726, ../scss/styles.scss */
+/* line 11744, ../scss/styles.scss */
 .my-account .addresses-list .item > :first-child {
   margin-top: 0;
 }
-/* line 11729, ../scss/styles.scss */
+/* line 11747, ../scss/styles.scss */
 .my-account .addresses-list .item > :last-child {
   margin-bottom: 0;
 }
-/* line 11733, ../scss/styles.scss */
+/* line 11751, ../scss/styles.scss */
 .my-account .addresses-list .item h1, .my-account .addresses-list .item h2, .my-account .addresses-list .item h3, .my-account .addresses-list .item h4, .my-account .addresses-list .item .block-related .block-title {
   color: #222222;
 }
 
-/* line 11739, ../scss/styles.scss */
+/* line 11757, ../scss/styles.scss */
 .block-related .my-account .addresses-list .item .block-title {
   color: #222222;
 }
 
-/* line 11744, ../scss/styles.scss */
+/* line 11762, ../scss/styles.scss */
 .my-account .addresses-list .item h5, .my-account .addresses-list .item h6, .my-account .addresses-list .item p {
   color: #222222;
 }
-/* line 11747, ../scss/styles.scss */
+/* line 11765, ../scss/styles.scss */
 .my-account .addresses-list .item h1, .my-account .addresses-list .item h2, .my-account .addresses-list .item h3, .my-account .addresses-list .item h4, .my-account .addresses-list .item .block-related .block-title {
   line-height: 1;
   margin-bottom: 0.625em;
 }
 
-/* line 11753, ../scss/styles.scss */
+/* line 11771, ../scss/styles.scss */
 .block-related .my-account .addresses-list .item .block-title {
   line-height: 1;
   margin-bottom: 0.625em;
 }
 
-/* line 11759, ../scss/styles.scss */
+/* line 11777, ../scss/styles.scss */
 .my-account .addresses-list .item h5, .my-account .addresses-list .item h6 {
   line-height: 1;
   margin-bottom: 0.625em;
 }
-/* line 11763, ../scss/styles.scss */
+/* line 11781, ../scss/styles.scss */
 .my-account .addresses-list .item h1.subheader, .my-account .addresses-list .item h2.subheader, .my-account .addresses-list .item h3.subheader, .my-account .addresses-list .item h4.subheader, .my-account .addresses-list .item .block-related .subheader.block-title {
   line-height: 1.4;
 }
 
-/* line 11768, ../scss/styles.scss */
+/* line 11786, ../scss/styles.scss */
 .block-related .my-account .addresses-list .item .subheader.block-title {
   line-height: 1.4;
 }
 
-/* line 11773, ../scss/styles.scss */
+/* line 11791, ../scss/styles.scss */
 .my-account .addresses-list .item h5.subheader, .my-account .addresses-list .item h6.subheader {
   line-height: 1.4;
 }
 
 /* View as panel */
-/* line 11780, ../scss/styles.scss */
+/* line 11798, ../scss/styles.scss */
 .welcome-msg {
   border-style: solid;
   border-width: 0;
@@ -11723,67 +11748,67 @@ input.validation-failed, textarea.validation-failed {
   padding: 16px;
   background: #f2f2f2;
 }
-/* line 11788, ../scss/styles.scss */
+/* line 11806, ../scss/styles.scss */
 .welcome-msg > :first-child {
   margin-top: 0;
 }
-/* line 11791, ../scss/styles.scss */
+/* line 11809, ../scss/styles.scss */
 .welcome-msg > :last-child {
   margin-bottom: 0;
 }
-/* line 11795, ../scss/styles.scss */
+/* line 11813, ../scss/styles.scss */
 .welcome-msg h1, .welcome-msg h2, .welcome-msg h3, .welcome-msg h4, .welcome-msg .block-related .block-title {
   color: #222222;
 }
 
-/* line 11800, ../scss/styles.scss */
+/* line 11818, ../scss/styles.scss */
 .block-related .welcome-msg .block-title {
   color: #222222;
 }
 
-/* line 11805, ../scss/styles.scss */
+/* line 11823, ../scss/styles.scss */
 .welcome-msg h5, .welcome-msg h6, .welcome-msg p {
   color: #222222;
 }
-/* line 11808, ../scss/styles.scss */
+/* line 11826, ../scss/styles.scss */
 .welcome-msg h1, .welcome-msg h2, .welcome-msg h3, .welcome-msg h4, .welcome-msg .block-related .block-title {
   line-height: 1;
   margin-bottom: 0.625em;
 }
 
-/* line 11814, ../scss/styles.scss */
+/* line 11832, ../scss/styles.scss */
 .block-related .welcome-msg .block-title {
   line-height: 1;
   margin-bottom: 0.625em;
 }
 
-/* line 11820, ../scss/styles.scss */
+/* line 11838, ../scss/styles.scss */
 .welcome-msg h5, .welcome-msg h6 {
   line-height: 1;
   margin-bottom: 0.625em;
 }
-/* line 11824, ../scss/styles.scss */
+/* line 11842, ../scss/styles.scss */
 .welcome-msg h1.subheader, .welcome-msg h2.subheader, .welcome-msg h3.subheader, .welcome-msg h4.subheader, .welcome-msg .block-related .subheader.block-title {
   line-height: 1.4;
 }
 
-/* line 11829, ../scss/styles.scss */
+/* line 11847, ../scss/styles.scss */
 .block-related .welcome-msg .subheader.block-title {
   line-height: 1.4;
 }
 
-/* line 11834, ../scss/styles.scss */
+/* line 11852, ../scss/styles.scss */
 .welcome-msg h5.subheader, .welcome-msg h6.subheader {
   line-height: 1.4;
 }
 
 /* Recent orders and My orders, list */
-/* line 11841, ../scss/styles.scss */
+/* line 11859, ../scss/styles.scss */
 .order-list {
   width: 100%;
   padding-top: 16px;
 }
-/* line 11844, ../scss/styles.scss */
+/* line 11862, ../scss/styles.scss */
 .order-list li {
   width: 100%;
   float: left;
@@ -11792,14 +11817,14 @@ input.validation-failed, textarea.validation-failed {
   padding-top: 24px;
   border-bottom: 1px solid #d9d9d9;
 }
-/* line 11852, ../scss/styles.scss */
+/* line 11870, ../scss/styles.scss */
 .order-list .order-id {
   position: absolute;
   left: 0;
   top: 0;
   opacity: 0.7;
 }
-/* line 11858, ../scss/styles.scss */
+/* line 11876, ../scss/styles.scss */
 .order-list .order-date {
   position: absolute;
   left: 0;
@@ -11808,120 +11833,120 @@ input.validation-failed, textarea.validation-failed {
   right: 0;
   left: auto;
 }
-/* line 11866, ../scss/styles.scss */
+/* line 11884, ../scss/styles.scss */
 .order-list .order-total, .order-list .order-to {
   font-size: 24px;
   float: left;
 }
-/* line 11870, ../scss/styles.scss */
+/* line 11888, ../scss/styles.scss */
 .order-list .order-total {
   float: right;
 }
-/* line 11873, ../scss/styles.scss */
+/* line 11891, ../scss/styles.scss */
 .order-list .order-status {
   float: left;
   clear: left;
   font-style: italic;
 }
-/* line 11878, ../scss/styles.scss */
+/* line 11896, ../scss/styles.scss */
 .order-list .order-actions {
   float: right;
   clear: right;
   text-align: right;
 }
-/* line 11883, ../scss/styles.scss */
+/* line 11901, ../scss/styles.scss */
 .order-list .order-status, .order-list .order-actions {
   margin: 16px 0 0;
 }
 
-/* line 11888, ../scss/styles.scss */
+/* line 11906, ../scss/styles.scss */
 .order-details h3 {
   font-size: 1.4375em;
 }
 
 /* View order */
-/* line 11895, ../scss/styles.scss */
+/* line 11913, ../scss/styles.scss */
 .my-account .order-info dt, .my-account .order-info dd {
   display: inline-block;
 }
-/* line 11898, ../scss/styles.scss */
+/* line 11916, ../scss/styles.scss */
 .my-account .order-info li {
   display: inline-block;
   margin-left: 16px;
 }
 
 /* Boxes */
-/* line 11906, ../scss/styles.scss */
+/* line 11924, ../scss/styles.scss */
 .box-account {
   *zoom: 1;
 }
-/* line 11908, ../scss/styles.scss */
+/* line 11926, ../scss/styles.scss */
 .box-account:before {
   content: " ";
   display: table;
 }
-/* line 11912, ../scss/styles.scss */
+/* line 11930, ../scss/styles.scss */
 .box-account:after {
   content: " ";
   display: table;
   clear: both;
 }
-/* line 11917, ../scss/styles.scss */
+/* line 11935, ../scss/styles.scss */
 .box-account .box-head {
   *zoom: 1;
   border-bottom: 1px solid #d9d9d9;
 }
-/* line 11920, ../scss/styles.scss */
+/* line 11938, ../scss/styles.scss */
 .box-account .box-head:before {
   content: " ";
   display: table;
 }
-/* line 11924, ../scss/styles.scss */
+/* line 11942, ../scss/styles.scss */
 .box-account .box-head:after {
   content: " ";
   display: table;
   clear: both;
 }
-/* line 11929, ../scss/styles.scss */
+/* line 11947, ../scss/styles.scss */
 .box-account .box-head h2, .box-account .box-head h3 {
   font-size: 1.4375em;
   float: left;
 }
-/* line 11933, ../scss/styles.scss */
+/* line 11951, ../scss/styles.scss */
 .box-account .box-head h2 {
   font-weight: bold;
 }
-/* line 11937, ../scss/styles.scss */
+/* line 11955, ../scss/styles.scss */
 .box-account .box-title {
   border-bottom: 1px solid #d9d9d9;
   *zoom: 1;
 }
-/* line 11940, ../scss/styles.scss */
+/* line 11958, ../scss/styles.scss */
 .box-account .box-title:before {
   content: " ";
   display: table;
 }
-/* line 11944, ../scss/styles.scss */
+/* line 11962, ../scss/styles.scss */
 .box-account .box-title:after {
   content: " ";
   display: table;
   clear: both;
 }
-/* line 11949, ../scss/styles.scss */
+/* line 11967, ../scss/styles.scss */
 .box-account .box-title h3 {
   float: left;
 }
-/* line 11953, ../scss/styles.scss */
+/* line 11971, ../scss/styles.scss */
 .box-account h4, .box-account .block-related .block-title {
   font-size: 16px;
 }
 
-/* line 11958, ../scss/styles.scss */
+/* line 11976, ../scss/styles.scss */
 .block-related .box-account .block-title {
   font-size: 16px;
 }
 
-/* line 11963, ../scss/styles.scss */
+/* line 11981, ../scss/styles.scss */
 .box-account .box-head a, .box-account .box-title a {
   float: right;
   margin-right: 16px;
@@ -11930,7 +11955,7 @@ input.validation-failed, textarea.validation-failed {
   line-height: 4em;
   color: #666666;
 }
-/* line 11964, ../scss/styles.scss */
+/* line 11982, ../scss/styles.scss */
 .box-account .box-head a:visited, .box-account .box-title a:visited {
   float: right;
   margin-right: 16px;
@@ -11939,19 +11964,19 @@ input.validation-failed, textarea.validation-failed {
   line-height: 4em;
   color: #666666;
 }
-/* line 11980, ../scss/styles.scss */
+/* line 11998, ../scss/styles.scss */
 .box-account .box-head a:hover, .box-account .box-head a:focus, .box-account .box-head a:active {
   color: #222222;
 }
-/* line 11985, ../scss/styles.scss */
+/* line 12003, ../scss/styles.scss */
 .box-account .box-title a:hover, .box-account .box-title a:focus, .box-account .box-title a:active {
   color: #222222;
 }
-/* line 11989, ../scss/styles.scss */
+/* line 12007, ../scss/styles.scss */
 .box-account .box-reviews li.item {
   border-bottom: 1px solid #d9d9d9;
 }
-/* line 11991, ../scss/styles.scss */
+/* line 12009, ../scss/styles.scss */
 .box-account .box-reviews li.item .number {
   float: left;
   padding: 0 8px;
@@ -11959,45 +11984,45 @@ input.validation-failed, textarea.validation-failed {
 }
 
 /* Account navigation */
-/* line 12001, ../scss/styles.scss */
+/* line 12019, ../scss/styles.scss */
 .block-account {
   margin-top: 1em;
 }
-/* line 12003, ../scss/styles.scss */
+/* line 12021, ../scss/styles.scss */
 .block-account ul li:last-child {
   border-bottom: 0;
 }
 
-/* line 12009, ../scss/styles.scss */
+/* line 12027, ../scss/styles.scss */
 .top-bar {
   margin-bottom: 2px !important;
 }
-/* line 12011, ../scss/styles.scss */
+/* line 12029, ../scss/styles.scss */
 .top-bar .toggle-topbar {
   left: 0 !important;
   padding-top: 6px !important;
 }
-/* line 12015, ../scss/styles.scss */
+/* line 12033, ../scss/styles.scss */
 .top-bar .name {
   margin: 0px 0 0 70px !important;
   font-size: 1.1em !important;
   font-weight: bold !important;
   text-transform: uppercase !important;
 }
-/* line 12023, ../scss/styles.scss */
+/* line 12041, ../scss/styles.scss */
 .top-bar .menu-stroke {
   font-size: 20px !important;
   font-weight: normal !important;
 }
 
 /* Toolbar */
-/* line 12033, ../scss/styles.scss */
+/* line 12051, ../scss/styles.scss */
 .toolbar label, .toolbar input, .toolbar select {
   width: auto;
   display: inline-block;
 }
 
-/* line 12039, ../scss/styles.scss */
+/* line 12057, ../scss/styles.scss */
 div.breadcrumbs {
   background: #dbdbdb !important;
   border: 0px;
@@ -12006,70 +12031,70 @@ div.breadcrumbs {
   margin-bottom: 2px;
   margin-top: 2px;
 }
-/* line 12048, ../scss/styles.scss */
+/* line 12066, ../scss/styles.scss */
 div.breadcrumbs span a {
   text-decoration: underline;
   font-weight: bold;
 }
 
-/* line 12058, ../scss/styles.scss */
+/* line 12076, ../scss/styles.scss */
 form {
   margin: 0 !important;
 }
 
-/* line 12062, ../scss/styles.scss */
+/* line 12080, ../scss/styles.scss */
 .block-subscribe {
   background: #dbdbdb;
   margin-bottom: 2px;
 }
-/* line 12065, ../scss/styles.scss */
+/* line 12083, ../scss/styles.scss */
 .block-subscribe .form-subscribe-header {
   text-align: center;
   padding-top: 2px;
 }
-/* line 12070, ../scss/styles.scss */
+/* line 12088, ../scss/styles.scss */
 .block-subscribe .button.secondary, .block-subscribe input[type="text"] {
   margin-bottom: 4px !important;
 }
-/* line 12073, ../scss/styles.scss */
+/* line 12091, ../scss/styles.scss */
 .block-subscribe label {
   padding-bottom: 0px;
 }
-/* line 12076, ../scss/styles.scss */
+/* line 12094, ../scss/styles.scss */
 .block-subscribe .block-content {
   /*padding-top:10px;*/
 }
 
-/* line 12083, ../scss/styles.scss */
+/* line 12101, ../scss/styles.scss */
 .category-products .toolbar {
   background: #dbdbdb;
   padding: 10px 0 0 0 !important;
   margin-top: 2px !important;
 }
-/* line 12089, ../scss/styles.scss */
+/* line 12107, ../scss/styles.scss */
 .category-products .pager_row {
   padding: 5px 0 5px 0 !important;
   margin-top: 2px !important;
   background: #dbdbdb !important;
 }
-/* line 12093, ../scss/styles.scss */
+/* line 12111, ../scss/styles.scss */
 .category-products .pager_row ul, .category-products .pager_row ol, .category-products .pager_row dl {
   margin-bottom: 0px !important;
 }
-/* line 12096, ../scss/styles.scss */
+/* line 12114, ../scss/styles.scss */
 .category-products .pager_row .pages {
   padding: 0 0px 0 20px;
 }
-/* line 12100, ../scss/styles.scss */
+/* line 12118, ../scss/styles.scss */
 .category-products .pager_row ul.pagination li:hover a, .category-products .pager_row ul.pagination li a:focus {
   background: none repeat scroll 0 0 #dbdbdb !important;
 }
-/* line 12106, ../scss/styles.scss */
+/* line 12124, ../scss/styles.scss */
 .category-products .sorter p {
   font-size: 0.875em;
 }
 
-/* line 12115, ../scss/styles.scss */
+/* line 12133, ../scss/styles.scss */
 .sorter, .pager {
   margin-left: auto;
   margin-right: auto;
@@ -12079,23 +12104,23 @@ form {
   *zoom: 1;
 }
 
-/* line 12123, ../scss/styles.scss */
+/* line 12141, ../scss/styles.scss */
 .sorter:before, .sorter:after, .pager:before, .pager:after {
   content: " ";
   display: table;
 }
 
-/* line 12127, ../scss/styles.scss */
+/* line 12145, ../scss/styles.scss */
 .sorter:after, .pager:after {
   clear: both;
 }
 
-/* line 12130, ../scss/styles.scss */
+/* line 12148, ../scss/styles.scss */
 .sorter p, .pager p {
   margin: 0;
 }
 
-/* line 12133, ../scss/styles.scss */
+/* line 12151, ../scss/styles.scss */
 .sorter .sort-by, .pager .sort-by {
   padding-left: 0;
   padding-right: 0;
@@ -12104,7 +12129,7 @@ form {
   float: right;
 }
 
-/* line 12140, ../scss/styles.scss */
+/* line 12158, ../scss/styles.scss */
 .sorter .view-mode, .pager .view-mode {
   padding-left: 0;
   padding-right: 0;
@@ -12112,7 +12137,7 @@ form {
   float: left;
 }
 
-/* line 12146, ../scss/styles.scss */
+/* line 12164, ../scss/styles.scss */
 .sorter .amount, .pager .amount {
   padding-left: 0;
   padding-right: 0;
@@ -12121,7 +12146,7 @@ form {
 }
 
 @media only screen and (min-width: 639px) {
-  /* line 12154, ../scss/styles.scss */
+  /* line 12172, ../scss/styles.scss */
   .sorter .amount, .pager .amount {
     padding-left: 0;
     padding-right: 0;
@@ -12129,7 +12154,7 @@ form {
     float: left;
   }
 }
-/* line 12161, ../scss/styles.scss */
+/* line 12179, ../scss/styles.scss */
 .sorter .limiter, .pager .limiter {
   padding-left: 0;
   padding-right: 0;
@@ -12137,7 +12162,7 @@ form {
 }
 
 @media only screen and (min-width: 639px) {
-  /* line 12167, ../scss/styles.scss */
+  /* line 12185, ../scss/styles.scss */
   .sorter .limiter, .pager .limiter {
     padding-left: 0;
     padding-right: 0;
@@ -12148,12 +12173,12 @@ form {
     float: right;
   }
 }
-/* line 12177, ../scss/styles.scss */
+/* line 12195, ../scss/styles.scss */
 .sorter .sort-by, .sorter .limiter, .pager .sort-by, .pager .limiter {
   text-align: right;
 }
 
-/* line 12180, ../scss/styles.scss */
+/* line 12198, ../scss/styles.scss */
 .sorter .limiter label, .sorter .limiter select, .pager .limiter label, .pager .limiter select {
   width: auto;
   display: inline-block;
@@ -12161,7 +12186,7 @@ form {
   font-weight: bold;
 }
 
-/* line 12186, ../scss/styles.scss */
+/* line 12204, ../scss/styles.scss */
 .sorter .pages, .pager .pages {
   padding-left: 0;
   padding-right: 0;
@@ -12171,7 +12196,7 @@ form {
 }
 
 @media only screen and (min-width: 639px) {
-  /* line 12194, ../scss/styles.scss */
+  /* line 12212, ../scss/styles.scss */
   .sorter .pages, .pager .pages {
     padding-left: 0;
     padding-right: 0;
@@ -12181,13 +12206,13 @@ form {
     float: left;
   }
 }
-/* line 12203, ../scss/styles.scss */
+/* line 12221, ../scss/styles.scss */
 .sorter .pages strong, .pager .pages strong {
   display: none;
   line-height: 1.5em;
 }
 
-/* line 12207, ../scss/styles.scss */
+/* line 12225, ../scss/styles.scss */
 .sorter .pages ol, .pager .pages ol {
   display: inline-block;
   width: 100%;
@@ -12196,7 +12221,7 @@ form {
   padding: 0;
 }
 
-/* line 12214, ../scss/styles.scss */
+/* line 12232, ../scss/styles.scss */
 .sorter .pages li, .pager .pages li {
   display: inline-block;
   line-height: inherit;
@@ -12204,27 +12229,27 @@ form {
   line-height: 22.5px;
 }
 
-/* line 12220, ../scss/styles.scss */
+/* line 12238, ../scss/styles.scss */
 .sorter .pages li a, .pager .pages li a {
   display: block;
 }
 
-/* line 12223, ../scss/styles.scss */
+/* line 12241, ../scss/styles.scss */
 .sorter .pages li.current, .pager .pages li.current {
   border: 1px solid #cccccc;
 }
 
-/* line 12226, ../scss/styles.scss */
+/* line 12244, ../scss/styles.scss */
 .sorter .pages strong, .pager .pages strong {
   display: none;
 }
 
-/* line 12232, ../scss/styles.scss */
+/* line 12250, ../scss/styles.scss */
 .clearer {
   clear: both;
 }
 
-/* line 12242, ../scss/styles.scss */
+/* line 12260, ../scss/styles.scss */
 ul.pagination li a.previous, ul.pagination li a.link {
   background: none repeat scroll 0 0 black;
   border-radius: 1px 3px 3px 1px;
@@ -12238,7 +12263,7 @@ ul.pagination li a.previous, ul.pagination li a.link {
   z-index: 100;
   color: white;
 }
-/* line 12255, ../scss/styles.scss */
+/* line 12273, ../scss/styles.scss */
 ul.pagination li a.previous span.notch, ul.pagination li a.link span.notch {
   display: block;
   width: 0;
@@ -12252,12 +12277,12 @@ ul.pagination li a.previous span.notch, ul.pagination li a.link span.notch {
   -webkit-transition: all .2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-/* line 12269, ../scss/styles.scss */
+/* line 12287, ../scss/styles.scss */
 ul.pagination li a.previous span.counter, ul.pagination li a.link span.counter {
   padding-right: 5px;
   padding-left: 5px;
 }
-/* line 12276, ../scss/styles.scss */
+/* line 12294, ../scss/styles.scss */
 ul.pagination li a.next {
   background: none repeat scroll 0 0 black;
   border-radius: 3px  3px  3px 3px;
@@ -12271,7 +12296,7 @@ ul.pagination li a.next {
   z-index: 100;
   color: white;
 }
-/* line 12290, ../scss/styles.scss */
+/* line 12308, ../scss/styles.scss */
 ul.pagination li a.next span.notch {
   display: block;
   width: 0;
@@ -12285,37 +12310,37 @@ ul.pagination li a.next span.notch {
   -webkit-transition: all .2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-/* line 12304, ../scss/styles.scss */
+/* line 12322, ../scss/styles.scss */
 ul.pagination li a.next span.counter {
   padding-right: 5px;
   padding-left: 5px;
 }
 
-/* line 12313, ../scss/styles.scss */
+/* line 12331, ../scss/styles.scss */
 ul.pagination {
   height: 12px !important;
 }
-/* line 12317, ../scss/styles.scss */
+/* line 12335, ../scss/styles.scss */
 ul.pagination .arrow a:hover, ul.pagination .arrow a:active, ul.pagination li .arrow a:focus, ul.pagination li .arrow a:focus span.notch, ul.pagination li .arrow .notch:hover {
   background: none repeat scroll 0 0 black !important;
 }
-/* line 12321, ../scss/styles.scss */
+/* line 12339, ../scss/styles.scss */
 ul.pagination li .arrow .notch:hover {
   border-color: black !important;
 }
 
 /* product-items-list --- start here */
-/* line 12329, ../scss/styles.scss */
+/* line 12347, ../scss/styles.scss */
 .product-items-list li {
   border-bottom: 1px solid #D9D9D9;
 }
 
-/* line 12334, ../scss/styles.scss */
+/* line 12352, ../scss/styles.scss */
 .toolbar-panel {
   padding-top: 6px;
 }
 
-/* line 12338, ../scss/styles.scss */
+/* line 12356, ../scss/styles.scss */
 .pager-panel {
   background: none repeat scroll 0 0 #dbdbdb !important;
   margin-bottom: 2px !important;
@@ -12323,41 +12348,41 @@ ul.pagination li .arrow .notch:hover {
 }
 
 /* product-items-list --- end here */
-/* line 12348, ../scss/styles.scss */
+/* line 12366, ../scss/styles.scss */
 .breadcrumbs li:last-child #product_counter {
   border: solid red 1px;
 }
 
-/* line 12354, ../scss/styles.scss */
+/* line 12372, ../scss/styles.scss */
 .social_link_cnt {
   margin-bottom: 5px !important;
   text-align: center;
 }
-/* line 12358, ../scss/styles.scss */
+/* line 12376, ../scss/styles.scss */
 .social_link_cnt li {
   display: inline;
 }
 
-/* line 12363, ../scss/styles.scss */
+/* line 12381, ../scss/styles.scss */
 .home-subheader, .customhome {
   font-size: 0.76667em;
   margin-bottom: 2px !important;
 }
 
-/* line 12367, ../scss/styles.scss */
+/* line 12385, ../scss/styles.scss */
 .reviewidth {
   width: 50%;
   clear: both;
   text-align: right;
 }
 
-/* line 12372, ../scss/styles.scss */
+/* line 12390, ../scss/styles.scss */
 .productwidth {
   width: 50%;
   clear: both;
 }
 
-/* line 12379, ../scss/styles.scss */
+/* line 12397, ../scss/styles.scss */
 #customer-reviews .pager .limiter label {
   padding-top: 8px;
 }

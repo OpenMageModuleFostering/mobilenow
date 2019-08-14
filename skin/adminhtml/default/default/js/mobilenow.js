@@ -666,17 +666,19 @@ function get_query(url){
 }
 
 function updatePreview(theme_id,frame_id){
-     Element.show('loading-mask');
+     Element.show('loading-mask');     
        $j.ajax({
             type: "POST",
             url: updatePreviewurl+'theme_id/'+theme_id+'/?isAjax=true',
-            data: $j('#edit_form').serialize(),               
+            data: $j('#edit_form').serialize(),
+            statusCode: {
+            500: function() {
+                 window.location.reload(true);
+            }},
             success: function(msg)
-            { 
-                
-                
+            {                 
                 qstring = get_query($j("#"+frame_id).attr("src"));
-              //  console.log(qstring,'qstring',qstring.preview)
+                //  console.log(qstring,'qstring',qstring.preview)
                 if(qstring.preview!=1){
                 	home_url = home_url+'&preview=1';
                 	catalog_url = catalog_url+'&preview=1';	
