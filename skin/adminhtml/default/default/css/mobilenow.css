@@ -1,0 +1,121 @@
+.mobilenow-adminhtml-mobilenow-new .content-footer .form-buttons, .mobilenow-adminhtml-mobilenow-edit .content-footer .form-buttons{position: relative; bottom: 75px;text-align: center;width: 538px;}
+#current_membership_level a{color: #EB5E00;}
+.edit_link_grid{margin:0px 0px 0px 15px;}
+.grid_edit_link_text{color:#2C3539;}
+.grid_link{color: #2C3539}
+#tabs,#layout_tabs{float:left; padding: 0 0 0 20px; width: 570px;}
+#mobilenow_tabs_design_content .fieldset, .insideborder .fieldset {float: left; width: 99%}
+#mobilenow_tabs_design_content .entry-edit .fieldset, #mobilenow_tabs_theme_layouts_content .entry-edit .fieldset{padding:10px 0}
+#preset_sub_settings{width: 150px}
+.preset_subsettings .form-list td.label label {display: block;padding-right: 15px; padding-top: 1px; width: 120px;}
+.preset_subsettings .form-list td.label{width: 120px}
+.columns .preset_subsettings .form-list td.value {width: 114px}
+.preset_subsettings .form-list tr{float: left}
+.preset_subsettings{background-color: #eeeeee}
+#mobilenow_tabs_design_content .ui-widget-content {background-color: #ffffff}
+#mobilenow_tabs_design_content .hor-scroll{overflow:visible}
+#general_homepage .form-list td.label {width: 120px}
+#general_homepage .form-list td.label label{width: 120px}
+.design_small{width: 15px !important;text-align:center;}
+.columns #general_homepage .form-list {width: 100%}
+#mobilenow_tabs_design_content .input-color{width: 70px;}
+.link_button_cls{ background: url("../images/btn_bg.gif") repeat-x scroll 0 100% #FFAC47;border-color: #ED6502 #A04300 #A04300 #ED6502;border-style: solid; border-width: 1px; color: #FFFFFF; cursor: pointer;padding: 2px 9px ;   text-align: center !important; white-space: nowrap; text-decoration: none;}
+.link_button_dlt{ background: url("../images/cancel_btn_bg.gif") repeat-x scroll 0 100% #FFAC47;border-color: #ED6502 #A04300 #A04300 #ED6502;border-style: solid; border-width: 1px; color: #FFFFFF; cursor: pointer;padding: 2px 7px ;   text-align: center !important; white-space: nowrap; text-decoration: none;}
+.link_button_rst{ background: url("../images/btn_bg.gif") repeat-x scroll 0 100% #FFAC47;border-color: #ED6502 #A04300 #A04300 #ED6502;border-style: solid; border-width: 1px; color: #FFFFFF; cursor: pointer;padding: 2px 7px ;   text-align: center !important; white-space: nowrap; text-decoration: none;}
+.link_button_cls span{background-position: 0 50%;background-repeat: no-repeat;line-height: 1.35em;padding-left: 15px;color: #FFFFFF; font-weight: bold;}
+.link_button_dlt span{background-position: 0 50%;background-repeat: no-repeat;line-height: 1.35em;padding-left: 19px;color: #FFFFFF; font-weight: bold;}
+.link_button_rst span{background-position: 0 50%;background-repeat: no-repeat;line-height: 1.35em;color: #FFFFFF; font-weight: bold;}
+.link_button_cls span.save{background-image: url("../images/save_btn_icon.gif");}
+.link_button_dlt span.delete{background-image: url("../images/cancel_btn_icon.gif");}
+.inline_save_as:hover, .save_settings_link:hover, .inline_delete:hover, .reset_settings_link:hover{text-decoration: none;}
+.save_as_title{color:#ED6502; font-weight: bold; font-size:16px; margin: 0 0 10px;}
+.save_as_content{font-size: 14px; margin: 10px 0 20px; font-weight: bold;}
+/* To change position of close button to Top Right Corner */
+#colorbox #cboxClose{top: 0;right: 0;}
+#cboxLoadedContent{margin-top:28px;margin-bottom:0;}
+/*#live_preview, #live_preview_layout{background: url("../mobilenow_images/IPHONE.png") no-repeat;margin: 30px 0 0 20px; width: 300px; height: 650px;}*/
+#live_preview, #live_preview_layout, .live_preview{float:left; width: 300px;}
+.form-list td.value select.select_theme_name{width:150px;}
+.common_tab_cnt.ui-widget-content{background:#FFF;border:none; padding:0;}
+.common_tab_cnt.ui-widget-content .ui-widget-header{background:none;border:none;padding:0;}
+.common_tab_cnt.ui-widget-content .ui-tabs-nav li.ui-tabs-active{margin-bottom: 0;padding-bottom: 0;background:#F6A828;}
+.common_tab_cnt.ui-widget-content .ui-tabs-nav li.ui-tabs-active a{color:#FFFFFF;}
+.common_tab_cnt table.form-list{width:100%;}
+.message-italic{font-style: italic;}
+table.layout-settings-table{width:500px;border:1px solid #D8D8D8;border-collapse:collapse ;}
+
+table.layout-settings-table th {
+    background-color: #D1D1D1;
+    border: 1px solid #D8D8D8;
+    color: #000000;
+    font-size: 12px;
+    padding: 3px;
+    text-align: left;
+    vertical-align: top;
+}
+table.layout-settings-table td {
+    
+    padding: 7px 5px;
+    vertical-align: top;
+}
+table.layout-settings-table tr{
+border-bottom: 1px solid #D8D8D8;
+}
+
+.layout-fields .layout-settings-table td.value input.sort_order{width:50px;text-align:center;}
+.layout-fields table.form-list tr.layout-trborder{border-bottom: 1px solid #D8D8D8;}
+.fieldset.layout-fields {border:none;background: none;padding:5px;}
+.layout-settings-table tr:first-child{
+    background-color: #D1D1D1;
+    border: 1px solid #D8D8D8;
+    color: #000000;
+    font-size: 12px;
+    padding: 3px;
+    text-align: left;
+    vertical-align: top;
+}
+.layout-settings-table tr td:first-child {width:200px;}
+.layout-settings-table tr:first-child td.label label,.layout-settings-table tr:first-child td.value span {color: #000000;font-size: 12px;font-weight: bold;}
+.layout-settings-table a.headlink{color:#1700FF;text-decoration: underline;font-weight: normal;}
+#subheader_section, #homepage_custom_code, #pre_footer_section, #footer_section{resize: none;}
+#cboxTitle{display:none !important;}
+.columns #mobilenowsettings_mobilenowaccount .form-list td.value {
+    padding-right: 5px !important;
+    width: 600px;
+}
+#mobilenowsettings_mobilenowaccount #current_membership_level td.label{padding-left: 0px !important}
+#default_catalog_view1, #default_catalog_view2{margin: -2px 0 0 !important;}
+#catalog_image_width, #product_image_width{width: 70px;}
+label[for=search_cart_bg_color],#search_cart_bg_color,
+label[for=cart_link_color],#cart_link_color,
+label[for=homepage_banner],#homepage_banner,
+label[for=homepage_banner_url],#homepage_banner_url,
+label[for=breadcrumbs_bg_color],#breadcrumbs_bg_color,
+label[for=breadcrumbs_font_color],#breadcrumbs_font_color,
+label[for=sort_options],.checkboxes,
+label[for=product_image_border_color],#product_image_border_color,
+label[for=product_image_width],#product_image_width,
+label[for=search_cart_bg_color],#search_cart_bg_color,
+label[for=image_border_color],#image_border_color,
+label[for=catalog_image_width],#catalog_image_width,
+label[for=review_star_color],#review_star_color,
+label[for=add_to_cart_button_bg_color],#add_to_cart_button_bg_color,
+label[for=add_to_cart_button_font_color],#add_to_cart_button_font_color,
+label[for=add_to_cart_button_border_color],#add_to_cart_button_border_color,
+label[for=newsletter_area_backgorund],#newsletter_area_backgorund,
+label[for=gridlines_color],#gridlines_color, #note_catalog_image_width,#banner_preview
+{margin-left:25px;}
+/*.preview-head{background: url("../mobilenow_images/iphone-top.png") no-repeat;margin: 15px 0 0 20px; width: 354px; height: 113px;}
+.preview-footer{background: url("../mobilenow_images/iphone-bottom.png") no-repeat;margin: 0px 0 0 20px; width: 354px; height: 120px;}*/
+.preview-head{background: url("../mobilenow_images/mob-top.png") no-repeat;margin: 30px 0 0 20px; width: 354px; height: 113px;}
+.preview-footer{background: url("../mobilenow_images/mob-bottom.png") no-repeat;margin: -6px 0 0 20px; width: 354px; height: 120px;}
+.render_preview{background: url("../mobilenow_images/mob-repeat.png") repeat-y; margin: 0px 0 0 20px;width:297px; padding: 0px 0px 0px 31px;}
+    .update-preview-button{margin-left:100px;}
+    .float_l{ float:left !important;}
+    .radio_label {float:left !important; width:100px;}
+    .minicolors.minicolors-theme-default .minicolors-input{margin-right:5px !important;}
+    ul.checkboxes label{float:left;margin-right:10px;width:130px;}
+    a.link-color{color:#1700FF !important;}
+    select{visibility: visible !important;}
+#mobilenow_tabs_design_content input[type='file'] {width: 90px; overflow:hidden;}
+ 

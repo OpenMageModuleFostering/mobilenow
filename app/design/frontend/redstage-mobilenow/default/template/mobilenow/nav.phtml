@@ -1,0 +1,61 @@
+<div>	   
+	 	
+	<div class="show-for-large-up">
+		<?php echo $this->getChildHtml('topMenu') ?>
+	</div>	
+	<?php if( $this->getData('menutype')==1) :?>
+		
+	<div class="show-for-small">
+		<nav class="top-bar">
+			<ul class="title-area">
+				<li class="toggle-topbar menu-icon" >
+					<a class="menu-button" href="#" alt="Menu">
+					  <svg width="30" height="20">
+						<path d="M0,3 30,3" stroke="#222222" stroke-width="3"/>
+						<path d="M0,10 30,10" stroke="#222222" stroke-width="3"/>
+						<path d="M0,17 30,17" stroke="#222222" stroke-width="3"/>
+					  </svg>
+					</a>
+				</li>
+				<li class="name"><a href="#">Categories</a></li>
+ 			</ul>
+			
+			<section class="top-bar-section" style="left: 0%;">
+				
+				<?php echo $this->getChildHtml('catalog_footernav') ?>
+				
+			</section>
+		</nav>
+	</div>
+	<?php endif;
+	
+	if( $this->getData('menutype')==2) :
+	?>
+	<div class="show-for-small  mobilemenu2">
+		<nav class="top-bar">
+			<div class="toggle-topbar"></div> 
+			<section class="top-bar-section" style="left: 0%;">				
+				<div id="mobilemenu2"> 
+					<?php echo $this->getChildHtml('catalog_footernav') ?>	
+				</div>
+			</section>
+		</nav>
+	</div>
+	<?php endif; ?>
+	
+
+</div>
+
+<script language="JavaScript">
+	
+	jQuery(document).ready(function() {
+		
+		jQuery('.mobilemenu2').find('.toggle-topbar').trigger('click');
+		
+		function toggleMenu(obj, val){
+			
+		}
+		
+	});
+
+</script>

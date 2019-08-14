@@ -1,0 +1,222 @@
+/* Theme Typo */
+$background-color           : #ffffff;
+$search-cart-area-bg-color  : #DBDBDB;
+$links-color                : #151515;
+$text-color                 : #151515;
+$categories-bg-color        : #DBDBDB;
+$newsletter-bg-color        : #DBDBDB;
+$button-bg-color            : #DBDBDB;
+$button-text-color          : #151515;
+$button-border-color        : #9F9F9F;
+
+$breadcrumb-bg-color        : #DBDBDB;
+$breadcrumb-font-color      : #151515;
+
+$toolbar-bg-color           : #DBDBDB;
+$toolbar-text-color         : #151515;
+$pagination-panel-bg-color  : #DBDBDB;
+$pagination-button-bg-color : #151515;
+$pagination-button-text-color: #ffffff;
+
+
+$image-border-color         : red;
+$product-title-color        : red;
+$product-price-color        : red;
+$product-special-price-color: red;
+$review-star-color          : red;
+
+$add-to-cart-bg-color       : red;
+$add-to-cart-button-text-color: white;
+$add-to-cart-border-color   : red;
+$gridlines-color            : red;
+
+
+
+
+.page{
+  background-color: $background-color ;
+}
+
+.header-container .search-panel {
+  background-color: $search-cart-area-bg-color;
+}
+
+a, a:not(a img), a:not(span.price) {
+   color: $links-color !important;
+   &:focus, &:active {
+     color: $links-color !important;
+   }
+   &:hover{
+     text-decoration: none !important;
+     border-bottom-color: $links-color;
+     color: $links-color !important;
+     border-bottom: 1px solid $links-color;
+   }
+}
+
+body, p, fieldset, table, span:not(.counter),span:not(.price),span:not(span.label), label, h1, h2, h3, h4, h5, h6,
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], 
+input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], 
+input[type="time"], input[type="url"], textarea{
+  color: $text-color !important;
+}
+
+.nav-container #nav, .nav-container #nav ul a, .top-bar, .top-bar-section ul, #mobile-menu li  {
+  background-color : $categories-bg-color;
+}
+
+button.secondary, .button.secondary{
+  background-color : $button-bg-color  !important;
+  border-color : $button-border-color !important;
+  color: $button-text-color !important;
+}
+
+ul.breadcrumbs{
+  background:none repeat scroll 0 0 $breadcrumb-bg-color !important;
+  li, a, span{ 
+      color : $breadcrumb-font-color !important;
+  }  
+  a{
+    &:hover{
+     text-decoration: none !important;
+     border-bottom-color: $breadcrumb-font-color;
+     color: $breadcrumb-font-color !important;
+     border-bottom: 1px solid $breadcrumb-font-color;
+   }
+  }
+  
+}
+
+.toolbar-panel{
+   background-color : $toolbar-bg-color !important;
+   
+   label{
+     color : $toolbar-text-color;
+   }
+}
+
+.pager-panel{
+    background: none repeat scroll 0 0 $pagination-panel-bg-color !important;
+    color:$pagination-button-text-color !important;
+    
+    a.previous, a.link {
+       background: none repeat scroll 0 0 $pagination-button-bg-color !important;
+       color:$pagination-button-text-color !important;
+       text-decoration : none !important;
+       border-bottom: 1px solid $pagination-button-bg-color !important;
+       span.notch{
+            border:11px solid transparent;
+            border-right:11px solid $pagination-button-bg-color !important;
+            border-right:11px solid $pagination-button-bg-color !important;
+        }
+        span.counter{
+          color:$pagination-button-text-color !important;
+        }
+    }
+    
+    a.next {
+      background: none repeat scroll 0 0 $pagination-button-bg-color !important;
+      color:$pagination-button-text-color !important;
+      border-bottom: 1px solid $pagination-button-bg-color !important;
+      span.notch{
+            border:11px solid transparent;
+            border-left:11px solid $pagination-button-bg-color !important;
+            border-left:11px solid $pagination-button-bg-color !important;
+      }
+      span.counter{
+        color:$pagination-button-text-color !important;
+      }
+    }
+
+    
+    ul.pagination {
+      
+      li .arrow .notch:hover
+      {
+        text-decoration : none !important;
+        border-color: $pagination-button-bg-color !important;
+       }
+      
+      .arrow a:hover,ul.pagination .arrow a:active, ul.pagination li .arrow a:focus,ul.pagination li .arrow a:focus span.notch, ul.pagination li .arrow .notch:hover
+      {
+        text-decoration : none !important;
+        background: none repeat scroll 0 0 $pagination-button-bg-color !important; 
+      }
+      
+    }
+    
+
+}
+
+.products-list{
+    
+    .item{
+      border-bottom : 1px solid $gridlines-color !important;
+      
+      .product-image{
+         border: 1px inset $image-border-color !important;
+      }
+    }
+}
+
+.product-name{
+  
+  color: $product-title-color !important;
+  text-decoration : none !important;
+  a{
+    color: $product-title-color !important;
+    text-decoration : none !important;
+  
+    &:hover{
+       text-decoration : none !important;
+       border-bottom: 1px solid $product-title-color !important;
+    }
+  } 
+  
+  h3{
+    color: $product-title-color !important;
+  }
+}
+
+.regular-price, .minimal-price{
+  span.price, span.price-label{
+    color: $product-price-color !important;
+  }
+}
+
+.price-box{
+   a{
+        color: $product-special-price-color !important;
+        &:hover{
+         text-decoration: none !important;
+         border-bottom-color: $product-special-price-color;
+         color: $product-special-price-color !important;
+         border-bottom: 1px solid $product-special-price-color;
+       }
+    }
+}
+
+.rating-box .rating{
+  color: $review-star-color !important;  
+}
+
+.add-to-cart{
+  button.secondary, .button.secondary{
+    background-color : $add-to-cart-bg-color  !important;
+    border-color : $add-to-cart-border-color !important;
+    color: $add-to-cart-button-text-color !important;
+  } 
+}
+.addtocart{
+  &.secondary, &.secondary{
+    background-color : $add-to-cart-bg-color  !important;
+    border-color : $add-to-cart-border-color !important;
+    color: $add-to-cart-button-text-color !important;
+  } 
+}
+ 
+.block-subscribe{
+   background-color : $newsletter-bg-color  !important;
+}
+
+

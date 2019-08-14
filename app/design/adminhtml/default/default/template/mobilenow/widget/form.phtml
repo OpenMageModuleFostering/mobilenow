@@ -1,0 +1,67 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     default_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<!--[if IE]>
+<style>
+.form-list td.label, .form-list td.value, .form-list td.value2, .form-list td.note, .form-list td.scope-label, .form-list td.use-default {
+    background: none repeat scroll 0 center rgba(0, 0, 0, 0) !important;
+    border: 0 none !important;
+    padding-bottom: 5px !important;
+    padding-left: 0px !important;
+    padding-top: 5px !important;
+}
+.columns .preset_subsettings .form-list td.value {width: 112px}
+.link_button_rst{ pointer;padding: 2px 4px ;}
+</style>
+<![endif]-->
+<script> 
+var uniqueUrl= '<?php echo Mage::helper('adminhtml')->getUrl('*/*/checkUniqueNameSave');?>';    
+    function showSaveAsPopup(elem){
+           $j(elem).colorbox({inline:true, width:"50%",href:"#inline_save_as_top",opacity: 0.6,
+                    onClosed: function () {
+                            $j('#sub_setting_theme_name_text').val('');
+                            $j('#save_error_text').html('');                          
+                            }
+                });
+           }     
+</script>
+<div class="entry-edit">
+    <?php echo $this->getFormHtml();?>
+</div>
+<?php echo $this->getChildHtml('form_after');?>
+<!------------------------------- Save As Top Button------------------------------------>
+<div style='display:none'>
+    <div id='inline_save_as_top' style='padding:10px; background:#fff;'>
+        <div class="save_as_title">Save Theme As..</div>
+        <hr/>
+        <div>
+            <div class="save_as_content">Specify a name for your new theme and confirm your save as action below:</div>
+            <div>Theme Name  <input type="text" id="sub_setting_theme_name_text" name="sub_setting_theme_name_text"/> <button class="scalable save" type="button" title="Save As.." id="theme_save_as_top"><span>Save</span></button></div>
+            <div style="height:150px;"><div id="save_error_top"></div></div>
+            <div><b>You are currently saving new theme.</b><span style="float:right;"><button class="scalable delete cancel_final" type="button" title="Cancel" id="cancel_save"><span>Cancel</span></button></span></div>
+        </div>
+    </div>
+</div>

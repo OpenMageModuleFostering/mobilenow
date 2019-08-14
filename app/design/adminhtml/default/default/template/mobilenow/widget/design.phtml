@@ -1,0 +1,279 @@
+<?php 
+$form_d = Mage::registry("mobilenow_data")->getData();
+if(isset($form_d['store_id']))
+	$stores = implode(',',$form_d['store_id']);
+else 
+	$stores=0;
+
+$theme_id = ((int)$this->getRequest()->getParam("id") > 0)?(int)$this->getRequest()->getParam("id"):1;
+?>
+<div class="entry-edit insideborder">
+    <div class="entry-edit-head">
+        <h4 class="icon-head head-edit-form fieldset-legend">Customize Mobile Theme Design</h4>
+        <div class="form-buttons"></div>
+    </div>
+    <div class="fieldset ">        
+        <script>    
+        var home_url = '<?php echo Mage::getBaseUrl();?>?theme_id=<?php echo $theme_id;?>&isadmin=1&store_id=<?php echo $stores?>'; 
+        var catalog_url ='<?php echo Mage::getBaseUrl().Mage::helper('mobilenow')->getPreviewCategoryUrl();?>?theme_id=<?php echo $theme_id;?>&isadmin=1&store_id=<?php echo $stores?>';  
+        var product_url ='<?php echo Mage::getBaseUrl().Mage::helper('mobilenow')->getPreviewProductUrl();?>?theme_id=<?php echo $theme_id;?>&isadmin=1&store_id=<?php echo $stores?>';              
+        $j(function() {
+        $j( "#tabs" ).tabs();
+        var sel_tab = 0;
+            <?php if($this->getRequest()->getParam("design_subtab") != ''){?>
+                sel_tab = <?php echo $this->getRequest()->getParam("design_subtab");?>;
+            <?php }?>
+            $j('#tabs').tabs( "option", "active", sel_tab );
+        });
+           $j(document).ready( function() {                              
+               $j('.minicolors').minicolors(
+                       {
+                        swatchPosition: 'right',
+                        animationSpeed: 500,
+			animationEasing: 'swing',
+                        hideSpeed: 500,
+                        showSpeed: 500
+                       }
+                   );
+                $j(".inline_save_as").colorbox({inline:true, width:"50%",opacity: 0.6,
+                    onClosed: function () {
+                            $j('#sub_setting_theme_name').val('');
+                            $j('#save_error').html('');
+                            $j('#layout_theme_name').val('');
+                            $j('#layout_save_error').html('');
+                            }
+                });                
+//                 $j(".inline_save_as_top").colorbox({inline:true, width:"50%",href:"#inline_save_as_top",opacity: 0.6,
+//                    onClosed: function () {
+//                            $j('#sub_setting_theme_name_text').val('');
+//                            $j('#save_error_text').html('');                          
+//                            }
+//                });
+                $j(".save_settings_link").colorbox({inline:true, width:"50%",opacity: 0.6});
+                $j(".reset_settings_link").colorbox({inline:true, width:"50%",opacity: 0.6});
+
+                $j(".inline_delete").colorbox({inline:true, width:"50%",opacity: 0.6});     
+              	    $j("#mobilenow_tabs_design").click(function(){
+                         activeSubTabs =$j("#tabs").tabs('option', 'active');                              
+                        if(activeSubTabs == 0){
+                            homeFrame('iframe-preview', home_url);
+                        } else if(activeSubTabs == 1){
+                            categoryFrame('iframe-preview',catalog_url);
+                        } else{
+                            productFrame('iframe-preview',product_url);
+                        }
+                        var loadPreview= '<?php echo $this->getRequest()->getParam("loadPreivew");?>';
+                        if(loadPreview)
+                        updatePreview('<?php echo $theme_id;?>','iframe-preview')
+                     });
+					
+               new AjaxUpload('logo', {
+                        action: uploadImageUrl+'upload_type/logo/theme_id/<?php echo $theme_id;?>/?isAjax=true', 
+                        name: 'logo',   
+                        dataType: "json", 
+                        autoSubmit :true,
+                        onSubmit: function(file, extension) { 
+                           Element.show('loading-mask');
+                            this.setData({
+                                type: 'preview',
+                                form_key : FORM_KEY
+                            }); 
+                        }, 
+                        onComplete: function(file, response) { 
+                            Element.hide('loading-mask');
+                            //var jsonObj	= response.evalJSON();
+                            var jsonObj = eval("(" + response + ")");
+                            if(jsonObj.mesasage != 'success'){
+                                alert(jsonObj.mesasage);
+                            } else {
+                                $j('#logo_preview_filename').val(jsonObj.logo_image_name);
+                                $j('#logo_preview').attr('src',jsonObj.preview_name);
+                            }
+//                            var decodedUri = decodeURIComponent(jsonObj.profilebanner);
+//                            jQuery('#profileBanner').val(jsonObj.profilebanner_file);         
+                           
+                        }
+                    }); 
+                    
+                    new AjaxUpload('homepage_banner', {
+                        action: uploadImageUrl+'upload_type/banner/theme_id/<?php echo $theme_id;?>/?isAjax=true', 
+                        name: 'homepage_banner',   
+                        dataType: "json", 
+                        autoSubmit :true,
+                        onSubmit: function(file, extension) { 
+                           Element.show('loading-mask');
+                            this.setData({
+                                type: 'preview',
+                                form_key : FORM_KEY
+                            }); 
+                        }, 
+                        onComplete: function(file, response) { 
+                            Element.hide('loading-mask');
+                            //var jsonObj	= response.evalJSON();
+                            var jsonObj = eval("(" + response + ")");
+                            if(jsonObj.mesasage != 'success'){
+                                alert(jsonObj.mesasage);
+                            } else {
+                                $j('#banner_preview_filename').val(jsonObj.banner_image_name);
+                                $j('#banner_preview').attr('src',jsonObj.preview_name);
+                            }
+//                            var decodedUri = decodeURIComponent(jsonObj.profilebanner);
+//                            jQuery('#profileBanner').val(jsonObj.profilebanner_file);         
+                           
+                        }
+                    }); 
+                    
+                    
+                    varienLoaderHandler.handler.onCreate({options: {loaderArea: true}});
+                    Element.hide('loading-mask');
+                    
+           });            
+
+           function getDocHeight(doc) 
+           {
+                doc = doc || document;
+                // stackoverflow.com/questions/...
+                var body = doc.body, html = doc.documentElement;
+                var height = Math.max( body.scrollHeight, body.offsetHeight, 
+                    html.clientHeight, html.scrollHeight, html.offsetHeight );
+                return height;
+            }
+            function setIframeHeight(id) {
+                var ifrm = document.getElementById(id);
+                var ifrm_div = document.getElementById(id+'_div');
+                var doc = ifrm.contentDocument? ifrm.contentDocument: 
+                    ifrm.contentWindow.document;
+               // ifrm.style.visibility = 'hidden';
+                 console.log('etDocHeight( doc )');
+                console.log(getDocHeight( doc ));
+                ifrm.style.height = "10px"; // reset to minimal height ...
+                // IE opt. for bing/msn needs a bit added or scrollbar appears
+                ifrm.style.height = getDocHeight( doc ) + 2 + "px";
+                ifrm_div.style.height = getDocHeight( doc ) + 2 + "px";
+                ifrm.style.visibility = 'visible';
+            }
+        </script>
+        <div class="tab-preview">
+            <div id="tabs" class="common_tab_cnt">
+                <ul>
+                    <li><a href="#general_homepage" onclick="homeFrame('iframe-preview',home_url)" id="design-general-homepage">General / Homepage</a></li>
+                    <li><a href="#catalog_page" onclick="categoryFrame('iframe-preview',catalog_url)" id="design-catalog-page">Catalog Page</a></li>
+                    <li><a href="#produt_page" onclick="productFrame('iframe-preview',product_url)" id="design-product-page">Product Page</a></li>
+                </ul>   
+                <?php echo $this->getFormHtml();?>
+            </div>               
+            <div id='live_preview'>
+                <div class="update-preview-button">                  
+                    <button style="" onclick="updatePreview('<?php echo $theme_id;?>','iframe-preview')" class="scalable save" type="button" title="Click Here to Update Preview" id="btn_update_preview_top">
+                        <span>
+                            <span>
+                                <span>Click Here to Update Preview</span>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+                <div class="preview-head"></div>
+                <div class="render_preview">
+                    <iframe id="iframe-preview" width="272px" src="<?php echo Mage::getBaseUrl();?>?theme_id=<?php echo $theme_id;?>&isadmin=1&store_id=<?php echo $stores?>"  onload="setIframeHeight(this.id)" style="border:none"></iframe>
+                    <div id="iframe-preview_div"style="width:272px; height: 442px; opacity:0.0; position: absolute; top:372px; background-color: #000000;"></div>
+                </div>
+                <div class="preview-footer"></div>
+                <div class="update-preview-button">                  
+                    <button style="" onclick="updatePreview('<?php echo $theme_id;?>','iframe-preview')" class="scalable save" type="button" title="Click Here to Update Preview" id="btn_update_preview">
+                        <span>
+                            <span>
+                                <span>Click Here to Update Preview</span>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
+<?php
+    echo $this->getChildHtml('form_after');    
+    $newRedrict = Mage::helper('adminhtml')->getUrl('*/*/resetSubsettings',array('id'=>$this->getRequest()->getParam("id"),'reset_delete'=>Mage::registry("subsettings_data")->getPresetSubSettings()));    
+?>
+<script type="text/javascript">   
+ var uniqueUrl= '<?php echo Mage::helper('adminhtml')->getUrl('*/*/checkUniqueNameSave');?>';
+ var updatePreviewurl= '<?php echo Mage::helper('adminhtml')->getUrl('*/*/updatePreview');?>';
+ var uploadImageUrl= '<?php echo Mage::helper('adminhtml')->getUrl('*/*/uploadDesignImage');?>';
+</script>
+<!------------------------------- Save As------------------------------------>
+<div style='display:none'>
+    <div id='inline_save_as' style='padding:10px; background:#fff;'>
+        <div class="save_as_title">Save Sub Settings As..</div>
+        <hr/>
+        <div>
+            <div class="save_as_content">Specify a name for your design sub settings and confirm your save as action below:</div>
+            <div>Sub Setting Theme Name  <input type="text" id="sub_setting_theme_name" name="sub_setting_theme_name"/> <button class="scalable save" type="button" title="Save As.." id="theme_save_as"><span>Save</span></button></div>
+            <div style="height:150px;"><div id="save_error"></div></div>
+            <div><b>You are currently saving color & design sub-settings.</b><span style="float:right;"><button class="scalable delete cancel_final" type="button" title="Cancel" id="cancel_save"><span>Cancel</span></button></span></div>
+        </div>
+    </div>
+</div>
+<!------------------------------- Save Setting------------------------------------>
+<div style='display:none'>
+    <div id='inline_save_setting' style='padding:10px; background:#fff;'>
+        <div class="save_as_title">Are you sure ?</div>
+        <hr/>
+        <div>
+            <div class="save_as_content">Click on the below button, so that the sub setting changes are updated.</div>
+            <div></div>
+            <div style="height:150px;"><button class="scalable save" type="button" title="Save Settings.." id="save_settings"><span>Save Settings..</span></button></div>
+            <div><b>You are currently updating color & design sub-settings.</b><span style="float:right;"><button class="scalable delete cancel_final" type="button" title="Cancel" id="cancel_save_settings"><span>Cancel</span></button></span></div>
+        </div>
+    </div>
+</div>
+<!------------------------------- Reset Setting------------------------------------>
+<div style='display:none'>
+    <div id='inline_reset_setting' style='padding:10px; background:#fff;'>
+        <div class="save_as_title">Are you sure ?</div>
+        <hr/>
+        <div>
+            <div class="save_as_content">Click on the below button to reset the sub settings</div>
+            <div></div>
+            <div style="height:150px;"><button class="scalable save" type="button" onclick="resetToDefault('<?php echo $newRedrict;?>');" title="Reset Settings to Default" id="reset_settings"><span>Reset Settings to Default</span></button></div>
+            <div><b>You are currently resetting color & design sub-settings.</b><span style="float:right;"><button class="scalable delete cancel_final" type="button" title="Cancel" id="cancel_save_settings"><span>Cancel</span></button></span></div>
+        </div>
+    </div>
+</div>
+<!------------------------------- Delete Setting------------------------------------>
+<div style='display:none'>
+    <div id='inline_delete' style='padding:10px; background:#fff;'>
+        <div class="save_as_title">Are You Sure?</div>
+        <hr/>
+        <div>
+            <div class="save_as_content">You have selected to delete this theme sub-setting. You cannot recover these settings. Please confirm your delete action:</div>
+            <div><button class="scalable save" type="button" title="Confirm Delete" onclick="deleteSubsetting('<?php echo Mage::helper('adminhtml')->getUrl('*/*/deleteSettings', array('id' => $this->getRequest()->getParam('id')));?>')" id="sub_settings_delete"><span>Confirm Delete</span></button></div>
+            <div style="height:150px;"></div>
+            <div><b>You are currently deleting a theme sub-setting, previously saved. </b><span style="float:right;"><button class="scalable delete cancel_final" type="button" title="Cancel" id="cancel_delete"><span>Cancel</span></button></span></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+//<![CDATA[   
+    Validation.add('validate-per-page-value-list', 'Please enter a valid value, ex: 10,20,30,all', function(v) {
+            var isValid = !Validation.get('IsEmpty').test(v);
+            var values  = v.split(',');
+            for (var i=0;i<values.length;i++) {               
+                if (!/^[0-9]+$/.test(values[i])) {
+                    if(values[i]!='all')
+                    {
+                        isValid = false;
+                    }                    
+                }
+            }
+            return isValid;
+        });
+        Validation.add('validate-per-page-value', 'Please enter a valid value from list', function(v, elm) {
+            if (Validation.get('IsEmpty').test(v)) {
+                return false;
+            }
+            var values = $('number_of_products_choice_steps').value.split(',');
+            return values.indexOf(v) != -1;
+        });
+
+//]]>          
+    </script>

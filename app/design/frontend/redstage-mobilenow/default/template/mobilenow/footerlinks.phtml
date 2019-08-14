@@ -1,0 +1,24 @@
+<?php 
+$menus=  $this->mobileLinks()  ;
+$menu_count = 1;
+ 
+?>
+
+	<div class="text-center">
+		
+		<ul class="footer-links">
+			<?php foreach ($menus as $key => $menu) {?>
+				<li>
+					<a href="<?php echo $menu['url'] ?>" title="<?php echo $menu['label'] ?>" ><?php echo $menu['label'] ?>
+					</a>
+				</li>
+				<?php 
+				if($menu_count < count($menus)){
+					echo '<li> | </li>';
+				}
+				$menu_count++;		
+			}
+			?>
+		</ul>
+		
+	</div>

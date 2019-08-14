@@ -1,0 +1,169 @@
+<?php 
+$form_d = Mage::registry("mobilenow_data")->getData();
+
+if(isset($form_d['store_id']))
+	$stores = implode(',',$form_d['store_id']);
+else 
+	$stores=0;
+
+$theme_id = ((int)$this->getRequest()->getParam("id") > 0)?(int)$this->getRequest()->getParam("id"):1;
+?>
+<div class="entry-edit insideborder">
+    <div class="entry-edit-head">
+        <h4 class="icon-head head-edit-form fieldset-legend">Customize Mobile Theme Layout</h4>
+        <div class="form-buttons"></div>
+    </div>
+    <div class="fieldset ">    
+        <script>
+         var home_url = '<?php echo Mage::getBaseUrl();?>?theme_id=<?php echo $theme_id;?>&isadmin=1&store_id=<?php echo $stores?>'; 
+        var catalog_url ='<?php echo Mage::getBaseUrl().Mage::helper('mobilenow')->getPreviewCategoryUrl();?>?theme_id=<?php echo $theme_id;?>&isadmin=1&store_id=<?php echo $stores?>';  
+        var product_url ='<?php echo Mage::getBaseUrl().Mage::helper('mobilenow')->getPreviewProductUrl();?>?theme_id=<?php echo $theme_id;?>&isadmin=1&store_id=<?php echo $stores?>';              
+
+        $j(function() {
+            $j( "#layout_tabs" ).tabs();
+            var l_sel_tab = 0;
+            <?php if($this->getRequest()->getParam("layout_subtab") != ''){?>
+                l_sel_tab = <?php echo $this->getRequest()->getParam("layout_subtab");?>;
+            <?php }?>
+            $j('#layout_tabs').tabs( "option", "active", l_sel_tab );
+        });
+           $j(document).ready( function() {               
+//                $j(".inline_save_as").colorbox({inline:true, width:"50%",opacity: 0.6});
+//                $j(".inline_delete").colorbox({inline:true, width:"50%",opacity: 0.6});
+                
+                $j('.layout-fields table.form-list').removeClass('form-list').addClass('layout-settings-table');
+                $j('.layout-grid-listheading table').each(function(){
+                    $j(this).find('tr:first td:first').remove();
+                    $j(this).find('tr:first td:first').attr('colspan','2');
+                });
+                        $j("#mobilenow_tabs_theme_layouts").click(function(){
+                            
+                            activeSubTabs = $j("#layout_tabs").tabs('option', 'active'); 
+                            if(activeSubTabs == 0){
+                                homeFrame('iframe-preview-layout', home_url);
+                            } else if(activeSubTabs == 1){
+                                categoryFrame('iframe-preview-layout',catalog_url);
+                            } else{
+                                productFrame('iframe-preview-layout',product_url);
+                            }
+
+		            });	        
+           });
+           function getDocHeight(doc) 
+           {
+                doc = doc || document;
+                // stackoverflow.com/questions/...
+                var body = doc.body, html = doc.documentElement;
+                var height = Math.max( body.scrollHeight, body.offsetHeight, 
+                    html.clientHeight, html.scrollHeight, html.offsetHeight );
+                return height;
+            }
+            function setIframeHeight(id) {
+                var ifrm = document.getElementById(id);
+                
+                var ifrm_div = document.getElementById(id+'_div');
+                var doc = ifrm.contentDocument? ifrm.contentDocument: ifrm.contentWindow.document;
+                //ifrm.style.visibility = 'hidden';
+                ifrm.style.height = "10px"; // reset to minimal height ...
+                // IE opt. for bing/msn needs a bit added or scrollbar appears
+                console.log('etDocHeight( doc )');
+                console.log(getDocHeight( doc ));
+                ifrm.style.height = getDocHeight( doc ) + 2 + "px";
+                ifrm_div.style.height = getDocHeight( doc ) + 2 + "px";
+                ifrm.style.visibility = 'visible';
+            }
+          
+        </script>
+        <div class="tab-preview">
+            <div id="layout_tabs" class="common_tab_cnt">
+                <ul>
+                  	<li><a href="#general_layout_homepage" onclick="homeFrame('iframe-preview-layout',home_url)" id="layout-general-homepage">General / Homepage</a></li>
+                    <li><a href="#catalog_layout_page" onclick="categoryFrame('iframe-preview-layout',catalog_url)" id="layout-catalog-page">Catalog Page</a></li>
+                    <li><a href="#produt_layout_page" onclick="productFrame('iframe-preview-layout',product_url)" id="layout-product-page">Product Page</a></li>
+                </ul>   
+                <?php echo $this->getFormHtml();?>
+            </div>
+             <div id='live_preview_layout'>
+                 <div class="update-preview-button">                  
+                    <button style="" onclick="updatePreview('<?php echo $theme_id;?>','iframe-preview')" class="scalable save" type="button" title="Click Here to Update Preview" id="btn_update_preview_layout_top">
+                        <span>
+                            <span>
+                                <span>Click Here to Update Preview</span>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+                <div class="preview-head"></div>
+                <div class="render_preview">
+                    <iframe id="iframe-preview-layout" width="272px" src="<?php echo Mage::getBaseUrl();?>?theme_id=<?php echo $theme_id;?>&isadmin=1&store_id=<?php echo $stores?>" onload="setIframeHeight(this.id)" style="border:none"></iframe>
+                    <div id="iframe-preview-layout_div"style="width:272px; height: 442px; opacity:0.0; position: absolute; top:372px; background-color: #000000;"></div>
+                </div>
+                <div class="preview-footer"></div>
+                <div class="update-preview-button">                  
+                    <button style="" onclick="updatePreview('<?php echo $theme_id;?>','iframe-preview-layout')" class="scalable save" type="button" title="Click Here to Update Preview" id="btn_update_preview_layout">
+                        <span>
+                            <span>
+                                <span>Click Here to Update Preview</span>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        </div>
+</div>
+<?php echo $this->getChildHtml('form_after');
+$newRedrict = Mage::helper('adminhtml')->getUrl('*/*/resetSubsettings',array('id'=>$this->getRequest()->getParam("id"),'reset_delete'=>Mage::registry("subsettings_data")->getPresetSubSettings()));    
+?>
+<!------------------------------- Save As------------------------------------>
+<div style='display:none'>
+    <div id='inline_save_as_layout' style='padding:10px; background:#fff;'>
+        <div class="save_as_title">Save Sub Settings As..</div>
+        <hr/>
+        <div>
+            <div class="save_as_content">Specify a name for your design sub settings and confirm your save as action below:</div>
+            <div>Sub Setting Theme Name  <input type="text" id="layout_theme_name" name="sub_setting_theme_name"/> <button class="scalable save" type="button" title="Save As.." id="layout_save_as"><span>Save</span></button></div>
+            <div style="height:150px;"><div id="layout_save_error"></div></div>
+            <div><b>You are currently saving color & design sub-settings.</b><span style="float:right;"><button class="scalable delete cancel_final" type="button" title="Cancel"><span>Cancel</span></button></span></div>
+        </div>
+    </div>
+</div>
+<!------------------------------- Save Setting------------------------------------>
+<div style='display:none'>
+    <div id='inline_save_setting_layout' style='padding:10px; background:#fff;'>
+        <div class="save_as_title">Are you sure ?</div>
+        <hr/>
+        <div>
+            <div class="save_as_content">Click on the below button, so that the sub setting changes are updated.</div>
+            <div></div>
+            <div style="height:150px;"><button class="scalable save" type="button" title="Save Settings.." id="layout_save_settings"><span>Save Settings..</span></button></div>
+            <div><b>You are currently updating color & design sub-settings.</b><span style="float:right;"><button class="scalable delete cancel_final" type="button" title="Cancel"><span>Cancel</span></button></span></div>
+        </div>
+    </div>
+</div>
+<!------------------------------- Reset Setting------------------------------------>
+<div style='display:none'>
+    <div id='inline_reset_setting_layout' style='padding:10px; background:#fff;'>
+        <div class="save_as_title">Are you sure ?</div>
+        <hr/>
+        <div> 
+            <div class="save_as_content">Click on the below button to reset the sub settings</div>
+            <div></div>
+            <div style="height:150px;"><button class="scalable save" type="button"  onclick="resetToDefault('<?php echo $newRedrict;?>');" title="Reset Settings to Default" id="layout_reset_settings"><span>Reset Settings to Default</span></button></div>
+            <div><b>You are currently resetting color & design sub-settings.</b><span style="float:right;"><button class="scalable delete cancel_final" type="button" title="Cancel"><span>Cancel</span></button></span></div>
+        </div>
+    </div>
+</div>
+<!------------------------------- Delete Setting------------------------------------>
+<div style='display:none'>
+    <div id='inline_delete_layout' style='padding:10px; background:#fff;'>
+        <div class="save_as_title">Are You Sure?</div>
+        <hr/>
+        <div>
+            <div class="save_as_content">You have selected to delete this theme sub-setting. You cannot recover these settings. Please confirm your delete action:</div>
+            <div><button class="scalable save" type="button" title="Confirm Delete" onclick="deleteLayoutSubsetting('<?php echo Mage::helper('adminhtml')->getUrl('*/*/deleteSettings', array('id' => $this->getRequest()->getParam('id')));?>')" id="layout_sub_settings_delete"><span>Confirm Delete</span></button></div>
+            <div style="height:150px;"></div>
+            <div><b>You are currently deleting a theme sub-setting, previously saved.</b><span style="float:right;"><button class="scalable delete cancel_final" type="button" title="Cancel"><span>Cancel</span></button></span></div>
+        </div>
+    </div>
+</div>

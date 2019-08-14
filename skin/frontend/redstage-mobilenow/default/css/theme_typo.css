@@ -1,0 +1,190 @@
+/* Theme Typo */
+/* line 36, ../scss/theme_typo.scss */
+.page {
+  background-color: white;
+}
+
+/* line 40, ../scss/theme_typo.scss */
+.header-container .search-panel {
+  background-color: #dbdbdb;
+}
+
+/* line 44, ../scss/theme_typo.scss */
+a, a:not(a img), a:not(span.price) {
+  color: #151515 !important;
+}
+/* line 46, ../scss/theme_typo.scss */
+a:focus, a:active, a:not(a img):focus, a:not(a img):active, a:not(span.price):focus, a:not(span.price):active {
+  color: #151515 !important;
+}
+/* line 49, ../scss/theme_typo.scss */
+a:hover, a:not(a img):hover, a:not(span.price):hover {
+  text-decoration: none !important;
+  border-bottom-color: #151515;
+  color: #151515 !important;
+  border-bottom: 1px solid #151515;
+}
+
+/* line 60, ../scss/theme_typo.scss */
+body, p, fieldset, table, span:not(.counter), span:not(.price), span:not(span.label), label, h1, h2, h3, h4, h5, h6,
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"],
+input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"],
+input[type="time"], input[type="url"], textarea {
+  color: #151515 !important;
+}
+
+/* line 64, ../scss/theme_typo.scss */
+.nav-container #nav, .nav-container #nav ul a, .top-bar, .top-bar-section ul, #mobile-menu li {
+  background-color: #dbdbdb;
+}
+
+/* line 68, ../scss/theme_typo.scss */
+button.secondary, .button.secondary {
+  background-color: #dbdbdb !important;
+  border-color: #9f9f9f !important;
+  color: #151515 !important;
+}
+
+/* line 74, ../scss/theme_typo.scss */
+ul.breadcrumbs {
+  background: none repeat scroll 0 0 #dbdbdb !important;
+}
+/* line 76, ../scss/theme_typo.scss */
+ul.breadcrumbs li, ul.breadcrumbs a, ul.breadcrumbs span {
+  color: #151515 !important;
+}
+/* line 80, ../scss/theme_typo.scss */
+ul.breadcrumbs a:hover {
+  text-decoration: none !important;
+  border-bottom-color: #151515;
+  color: #151515 !important;
+  border-bottom: 1px solid #151515;
+}
+
+/* line 90, ../scss/theme_typo.scss */
+.toolbar-panel {
+  background-color: #dbdbdb !important;
+}
+/* line 93, ../scss/theme_typo.scss */
+.toolbar-panel label {
+  color: #151515;
+}
+
+/* line 98, ../scss/theme_typo.scss */
+.pager-panel {
+  background: none repeat scroll 0 0 #dbdbdb !important;
+  color: white !important;
+}
+/* line 102, ../scss/theme_typo.scss */
+.pager-panel a.previous, .pager-panel a.link {
+  background: none repeat scroll 0 0 #151515 !important;
+  color: white !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid #151515 !important;
+}
+/* line 107, ../scss/theme_typo.scss */
+.pager-panel a.previous span.notch, .pager-panel a.link span.notch {
+  border: 11px solid transparent;
+  border-right: 11px solid #151515 !important;
+  border-right: 11px solid #151515 !important;
+}
+/* line 112, ../scss/theme_typo.scss */
+.pager-panel a.previous span.counter, .pager-panel a.link span.counter {
+  color: white !important;
+}
+/* line 117, ../scss/theme_typo.scss */
+.pager-panel a.next {
+  background: none repeat scroll 0 0 #151515 !important;
+  color: white !important;
+  border-bottom: 1px solid #151515 !important;
+}
+/* line 121, ../scss/theme_typo.scss */
+.pager-panel a.next span.notch {
+  border: 11px solid transparent;
+  border-left: 11px solid #151515 !important;
+  border-left: 11px solid #151515 !important;
+}
+/* line 126, ../scss/theme_typo.scss */
+.pager-panel a.next span.counter {
+  color: white !important;
+}
+/* line 135, ../scss/theme_typo.scss */
+.pager-panel ul.pagination li .arrow .notch:hover {
+  text-decoration: none !important;
+  border-color: #151515 !important;
+}
+/* line 141, ../scss/theme_typo.scss */
+.pager-panel ul.pagination .arrow a:hover, .pager-panel ul.pagination ul.pagination .arrow a:active, .pager-panel ul.pagination ul.pagination li .arrow a:focus, .pager-panel ul.pagination ul.pagination li .arrow a:focus span.notch, .pager-panel ul.pagination ul.pagination li .arrow .notch:hover {
+  text-decoration: none !important;
+  background: none repeat scroll 0 0 #151515 !important;
+}
+
+/* line 153, ../scss/theme_typo.scss */
+.products-list .item {
+  border-bottom: 1px solid red !important;
+}
+/* line 156, ../scss/theme_typo.scss */
+.products-list .item .product-image {
+  border: 1px inset red !important;
+}
+
+/* line 162, ../scss/theme_typo.scss */
+.product-name {
+  color: red !important;
+  text-decoration: none !important;
+}
+/* line 166, ../scss/theme_typo.scss */
+.product-name a {
+  color: red !important;
+  text-decoration: none !important;
+}
+/* line 170, ../scss/theme_typo.scss */
+.product-name a:hover {
+  text-decoration: none !important;
+  border-bottom: 1px solid red !important;
+}
+/* line 176, ../scss/theme_typo.scss */
+.product-name h3 {
+  color: red !important;
+}
+
+/* line 182, ../scss/theme_typo.scss */
+.regular-price span.price, .regular-price span.price-label, .minimal-price span.price, .minimal-price span.price-label {
+  color: red !important;
+}
+
+/* line 188, ../scss/theme_typo.scss */
+.price-box a {
+  color: red !important;
+}
+/* line 190, ../scss/theme_typo.scss */
+.price-box a:hover {
+  text-decoration: none !important;
+  border-bottom-color: red;
+  color: red !important;
+  border-bottom: 1px solid red;
+}
+
+/* line 199, ../scss/theme_typo.scss */
+.rating-box .rating {
+  color: red !important;
+}
+
+/* line 204, ../scss/theme_typo.scss */
+.add-to-cart button.secondary, .add-to-cart .button.secondary {
+  background-color: red !important;
+  border-color: red !important;
+  color: white !important;
+}
+
+/* line 211, ../scss/theme_typo.scss */
+.addtocart.secondary, .addtocart.secondary {
+  background-color: red !important;
+  border-color: red !important;
+  color: white !important;
+}
+
+/* line 218, ../scss/theme_typo.scss */
+.block-subscribe {
+  background-color: #dbdbdb !important;
+}

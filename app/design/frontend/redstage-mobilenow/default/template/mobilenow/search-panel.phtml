@@ -1,0 +1,38 @@
+<div class="row search-panel">
+	<div class="small-7 medium-7 large-7 columns">
+		<?php echo $this->getChildHtml('topSearch') ?>
+	</div>
+	<div class="small-5 medium-5 large-5 columns">
+		
+		<a class="right menucart" title="<?php echo $this->__('My Cart') ?>" href="<?php echo $this->getUrl('checkout/cart') ?>">&nbsp;
+			
+
+			<?php
+				$count = $this->helper('checkout/cart')->getSummaryCount();  
+				$total = $this->helper('checkout/cart')->getQuote()->getGrandTotal(); 
+			?>
+			
+			<?php if($count == 0):?>
+				<?php echo $this->__('My Cart (0)', $count) ?>
+			<?php endif; ?>
+			
+			<?php if($count == 1):?>
+				<?php echo $this->__('My Cart (1)', $count) ?>
+			<?php endif; ?>
+			
+			<?php if($count >= 2):?>
+				<?php echo $this->__('My Cart (%s)', $count) ?>
+			<?php endif; ?>
+			
+			<!--a title="<?php echo $this->__('Checkout') ?>"  href="<?php echo $this->getUrl('checkout') ?>">
+				<?php //echo $this->helper('checkout')->formatPrice(Mage::getSingleton('checkout/cart')->getQuote()->getGrandTotal()); ?>
+			</a-->
+			
+			
+		</a>
+		<a class="right mycarticon" title="<?php echo $this->__('My Cart') ?>" href="<?php echo $this->getUrl('checkout/cart') ?>">
+			<i class="foundicon-cart small"></i>
+		</a>
+
+	</div>
+</div>

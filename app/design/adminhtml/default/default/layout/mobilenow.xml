@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+<default>
+    <reference name="head">        
+        <action method="addItem"><type>skin_js</type><name>js/jquery-1.10.2.min.js</name></action> 
+        <action method="addItem"><type>skin_js</type><name>js/mobilenow.js</name></action>
+        <action method="addItem"><type>skin_js</type><name>js/jquery-ui-1.10.3.custom.js</name></action>
+        <action method="addItem"><type>skin_js</type><name>js/jquery.minicolors.js</name></action>
+        <action method="addItem"><type>skin_js</type><name>js/jquery.colorbox.js</name></action>          
+        <action method="addItem"><type>skin_js</type><name>js/ajaxupload.js</name></action>          
+        <action method="addItem"><type>skin_css</type><name>css/mobilenow.css</name></action>
+        <action method="addItem"><type>skin_css</type><name>css/colorbox.css</name></action>
+        <action method="addItem"><type>skin_css</type><name>css/ui-lightness/jquery-ui-1.10.3.custom.css</name></action>
+        <action method="addItem"><type>skin_css</type><name>css/jquery.minicolors.css</name></action>
+    </reference>
+</default>
+<adminhtml_system_config_edit>
+    <reference name="content">
+        <block type="mobilenow/adminhtml_mobilenowbackend" name="mobilenowbackend" template="mobilenow/mobilenowbackend.phtml"/>
+    </reference>
+</adminhtml_system_config_edit>
+ <mobilenow_adminhtml_mobilenow_index>
+	<reference name="content">
+	  <block type="mobilenow/adminhtml_mobilenow" name="mobilenow" />
+	</reference>
+  </mobilenow_adminhtml_mobilenow_index>
+</layout>

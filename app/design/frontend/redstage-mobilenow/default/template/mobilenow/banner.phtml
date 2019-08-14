@@ -1,0 +1,10 @@
+<?php $homepagebanner = $this->helper('mobilenow/theme')->getThemeData('homepagebanner');
+$banner = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'mobilenow_theme_images/banner/'.$homepagebanner->homepage_banner;
+$dir_bannerpath = Mage::getBaseDir('media').DS.'mobilenow_theme_images/banner/'.$homepagebanner->homepage_banner;
+if($homepagebanner->homepage_banner != '' &&  @file_exists($dir_bannerpath)):
+?>
+
+<div class="row home-banner text-center">	
+	<a href="<?php echo $homepagebanner->homepage_banner_url ?>"><img src="<?php echo $banner ?>"></a>
+</div>	
+<?php endif ;?>

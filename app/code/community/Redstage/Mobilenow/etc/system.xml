@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <mobilenow translate="label" module="mobilenow">
+        <label>Mobile Now</label>
+        <sort_order>101</sort_order>
+        </mobilenow>
+    </tabs>
+    <sections>
+        <mobilenowsettings  translate="label" module="mobilenow">                    
+            <label>Settings</label>
+            <tab>mobilenow</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>100</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>            
+            <groups>
+                <mobilenowaccount translate="label"> 
+                <label>Mobile Now Account Settings</label>
+                <frontend_type>text</frontend_type>                
+                <sort_order>0</sort_order>
+                <show_in_default>1</show_in_default>
+                <show_in_website>1</show_in_website>
+                <show_in_store>1</show_in_store>
+                <comment><![CDATA[
+                    <table class="form-list" id="current_membership_level" cellpadding="0" cellspaceing="0" width="63%">
+                        <tr id="current_membership_level_error_row">
+                            <td colspan="2"><span id="connect_error" style="color:red"></span></td>                            
+                        </tr>
+                         <tr id="current_membership_level_text_row">
+                            <td class="label">Current Membership Level:</td>
+                            <td class="value"><strong>No Account Set Up - <a href="https://mobilenowapp.com/pricing" target="_blank">Click here to Get Your Free Account!</strong></a></td>                           
+                        </tr>                         
+                    </table>
+                ]]></comment>
+                <fields>
+                    <email translate="label">
+                        <label>E-mail</label>
+                        <frontend_type>text</frontend_type>
+                        <validate>validate-email</validate>
+                        <sort_order>1</sort_order>
+                        <show_in_default>1</show_in_default>
+                        <show_in_website>1</show_in_website>
+                        <show_in_store>1</show_in_store>
+                        <comment>Please enter email</comment>
+                    </email>
+                    <username translate="label">
+                        <label>Username</label>
+                        <frontend_type>text</frontend_type>
+                        <sort_order>2</sort_order>
+                        <show_in_default>1</show_in_default>
+                        <show_in_website>1</show_in_website>
+                        <show_in_store>1</show_in_store>
+                        <comment>Please enter username</comment>
+                    </username>
+                    <password translate="label">
+                        <label>Password</label>
+                        <frontend_type>password</frontend_type>
+                        <sort_order>3</sort_order>
+                        <show_in_default>1</show_in_default>
+                        <show_in_website>1</show_in_website>
+                        <show_in_store>1</show_in_store>                        
+                        <comment>Please enter password</comment>
+                    </password>
+                    <subscription translate="label">
+                        <label>Password</label>
+                        <frontend_type>text</frontend_type>
+                        <sort_order>3</sort_order>
+                        <show_in_default>1</show_in_default>
+                        <show_in_website>1</show_in_website>
+                        <show_in_store>1</show_in_store>                        
+                        <comment>Please enter password</comment>
+                    </subscription>
+                     <link translate="label">
+                        <label>Manage Account URL</label>
+                        <frontend_type>link</frontend_type>
+                        <frontend_model>mobilenow/adminhtml_system_config_form_link</frontend_model>                       
+                        <sort_order>4</sort_order>
+                        <show_in_default>1</show_in_default>
+                        <show_in_website>1</show_in_website>
+                        <show_in_store>1</show_in_store>                       
+                    </link>  
+                                    
+                    <button translate="label">
+                        <label></label>
+                        <frontend_type>button</frontend_type>
+                        <frontend_model>mobilenow/adminhtml_system_config_form_button</frontend_model>                       
+                        <sort_order>5</sort_order>
+                        <show_in_default>1</show_in_default>
+                        <show_in_website>1</show_in_website>
+                        <show_in_store>1</show_in_store>                       
+                    </button>
+                </fields>              
+                </mobilenowaccount>
+                <mobilenowgeneral translate="label"> 
+                    <label>General Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <comment><![CDATA[
+                        <i>MobileNow v1.0.1 - <a href="https://mobilenowapp.com/am/login/index" style="color:#EA7601">Click Here To Check For Updates</a></i>
+                    ]]></comment>
+                    <fields>
+                        <status translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>                           
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Please select the status</comment>
+                        </status>
+                    </fields>
+                </mobilenowgeneral>
+            </groups>
+        </mobilenowsettings>
+    </sections>
+</config>

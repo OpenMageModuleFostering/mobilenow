@@ -1,0 +1,20 @@
+<?php 
+$menus=  $this->mobileLinks()  ;
+$menu_count = 1;
+ 
+?>
+<dl class="sub-nav">
+	<?php foreach ($menus as $key => $menu) {?>
+		<dd>
+			<a href="<?php echo $menu['url'] ?>" title="<?php echo $menu['label'] ?>" ><?php echo $menu['label'] ?>
+			</a>
+		</dd>
+		<?php 
+		if($menu_count < count($menus)){
+			echo '<dd> | </dd>';
+		}
+		$menu_count++;		
+	}
+	?>
+</dl>
+

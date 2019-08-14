@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Redstage_Mobilenow>
+      <version>0.1.4</version>
+    </Redstage_Mobilenow>
+  </modules>
+  <frontend>
+    <routers>
+      <mobilenow>
+        <use>standard</use>
+          <args>
+            <module>Redstage_Mobilenow</module>
+            <frontName>mobilenow</frontName>
+          </args>
+      </mobilenow>
+    </routers>
+		<layout>
+		  <updates>
+			<mobilenow>
+			  <file>mobilenow.xml</file>
+			</mobilenow>
+		  </updates>
+		</layout>
+  </frontend>
+  <global>
+    <helpers>
+      <cms>
+	  	<rewrite>
+	  		<page>Redstage_Mobilenow_Helper_Cms_Page</page>
+	  	</rewrite>
+  	  </cms>
+      <mobilenow>
+        <class>Redstage_Mobilenow_Helper</class>
+      </mobilenow>
+    </helpers>
+	<blocks>
+	  <mobilenow>
+		<class>Redstage_Mobilenow_Block</class>
+	  </mobilenow>
+	</blocks>
+	<models>
+	  <core>
+	  	<rewrite>	  		
+			<design_package>Redstage_Mobilenow_Model_Design_Package</design_package>
+			<layout_update>Redstage_Mobilenow_Model_Layout_Update</layout_update>	  		
+	  	</rewrite>
+  	  </core>
+  	  <core_resource>
+        <rewrite>
+            <layout>Redstage_Mobilenow_Model_Resource_Layout</layout>
+        </rewrite>
+      </core_resource>
+      
+	  <mobilenow>
+		<class>Redstage_Mobilenow_Model</class>
+		<resourceModel>mobilenow_mysql4</resourceModel>
+	  </mobilenow>
+	  <mobilenow_mysql4>
+		<class>Redstage_Mobilenow_Model_Mysql4</class>
+		<entities>		  
+                    <mobilenow>
+                          <table>themesettings</table>
+                    </mobilenow>
+                    <themestore>
+                      <table>theme_store_id</table>
+                    </themestore>
+                    <themesubsettings>
+                      <table>themesubsettings</table>
+                    </themesubsettings>
+                    <corelayoutupdate>
+                      <table>core_layout_update</table>
+                    </corelayoutupdate>
+                    <corelayoutlink>
+                      <table>core_layout_link</table>
+                    </corelayoutlink>
+                    <themelayoutsettings>
+                      <table>themelayoutsettings</table>
+                    </themelayoutsettings>
+                </entities>
+	  </mobilenow_mysql4>         
+	</models>
+	<resources>
+	  <mobilenow_setup>
+		<setup>
+		  <module>Redstage_Mobilenow</module>
+		</setup>
+		<connection>
+		  <use>core_setup</use>
+		</connection>
+	  </mobilenow_setup>
+	  <mobilenow_write>
+		<connection>
+		  <use>core_write</use>
+		</connection>
+	  </mobilenow_write>
+	  <mobilenow_read>
+		<connection>
+		  <use>core_read</use>
+		</connection>
+	  </mobilenow_read>
+	</resources>
+  </global>
+  <admin>
+	<routers>
+	  <mobilenow>
+	    <use>admin</use>
+		<args>
+		  <module>Redstage_Mobilenow</module>
+		  <frontName>mobilenow</frontName>
+		</args>
+	  </mobilenow>
+	</routers>
+  </admin>
+  <adminhtml>
+	<menu>
+            <mobilenow module="mobilenow">
+                <title>MobileNow</title>
+                <sort_order>90</sort_order>
+                <children>
+                    <!--<mobilenowbackend module="mobilenow">
+                        <title>Backend Page Title</title>
+                        <sort_order>0</sort_order>
+                        <action>mobilenow/adminhtml_mobilenowbackend</action>
+                    </mobilenowbackend>-->                    
+                    <createtheme module="mobilenow">
+                        <title>Add New Mobile Theme</title>
+                        <sort_order>1</sort_order>
+                        <action>mobilenow/adminhtml_mobilenow/new</action>
+                    </createtheme>
+                    <managetheme module="mobilenow">
+                        <title>Manage Mobile Themes</title>
+                        <sort_order>2</sort_order>
+                        <action>mobilenow/adminhtml_mobilenow/index</action>
+                    </managetheme>
+                    <manageaccount module="mobilenow">
+                        <title>Manage / Upgrade MyAccount</title>
+                        <sort_order>3</sort_order>
+                        <action>adminhtml/system_config/edit/section/mobilenowsettings</action>
+                    </manageaccount>
+                   <configopt module="mobilenow">
+                        <title>Configuration Options</title>
+                        <sort_order>4</sort_order>
+                        <action>adminhtml/system_config/edit/section/mobilenowsettings</action>
+                    </configopt>
+                    <help module="mobilenow">
+                        <title>Help &amp; Documentation</title>
+                        <sort_order>5</sort_order>
+                        <action>mobilenow/adminhtml_mobilenow/help</action>
+                    </help>
+                </children>
+            </mobilenow>
+	</menu>
+	<acl>
+	  <resources>
+		<all>
+		  <title>Allow Everything</title>
+		</all>
+		<admin>
+                    <children>
+                        <mobilenow translate="title" module="mobilenow">
+                            <title>MobileNow</title>
+                            <sort_order>1000</sort_order>
+                            <children>
+                                <!--<mobilenowbackend translate="title">
+                                <title>Backend Page Title</title>
+                                </mobilenowbackend>-->
+                                <createtheme translate="title">
+                                    <title>Add New Mobile Theme</title>
+                                    <sort_order>1</sort_order>
+                                </createtheme>
+                                <managetheme translate="title">
+                                    <title>Manage Mobile Themes</title>
+                                    <sort_order>2</sort_order>
+                                </managetheme>
+                                <manageaccount translate="title">
+                                    <title>Manage/Upgrade My Account</title>
+                                    <sort_order>3</sort_order>
+                                </manageaccount>  
+                                <configopt translate="title">
+                                    <title>Configuration Options</title>
+                                    <sort_order>4</sort_order>
+                                </configopt>
+                                <help translate="title">
+                                    <title>Help &amp; Documentation</title>
+                                    <sort_order>5</sort_order>
+                                </help>                      
+                            </children>
+                        </mobilenow>
+                    </children>
+		</admin>
+	  </resources>
+	</acl>
+	<layout>
+	  <updates>
+		<mobilenow>
+		  <file>mobilenow.xml</file>
+		</mobilenow>
+	  </updates>
+	</layout>
+  </adminhtml>
+  <stores>
+        <admin>
+            <dev>
+                <debug>
+                    <template_hints>0</template_hints>
+                    <template_hints_blocks>0</template_hints_blocks>
+                </debug>
+            </dev>
+        </admin>
+    </stores>
+</config> 

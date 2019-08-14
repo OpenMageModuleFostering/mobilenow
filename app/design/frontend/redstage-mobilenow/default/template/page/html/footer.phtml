@@ -1,0 +1,77 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+ $helperObj = $this->helper('mobilenow/theme');
+       $social_link_objects =  $helperObj->getThemeData('social_links');
+       //var_dump($social_link_objects);
+?>
+<div class="footer-container">
+    <footer class="footer">
+    	<div class="row">
+			<?php echo $this->getChildHtml('prefootercontent') ?> 
+		</div>
+		<div class="row">			
+  				<?php echo $this->getChildHtml('mobilelinks-footer') ?> 			
+		</div>	
+        <?php if( $social_link_objects->show_social_links){?>
+                <div class="row social_link_cnt">			
+  			<ul class="social">
+                           <?php if($social_link_objects->facebook_link != ''){?>
+                           <li>
+                              <a href="<?php echo $social_link_objects->facebook_link;?>" title="Facebook">
+                                 <img src="<?php echo $this->getSkinUrl('images/fb.png');?>" />
+                              </a>
+                           </li>
+                           <?php }if($social_link_objects->twitter_link != ''){?>
+                           <li>
+                              <a href="<?php echo $social_link_objects->twitter_link;?>" title="Twitter">
+                                 <img src="<?php echo $this->getSkinUrl('images/tw.png');?>" />
+                              </a>
+                           </li>
+                          <?php }if($social_link_objects->pinterest_link != ''){?>
+                           <li>
+                              <a href="<?php echo $social_link_objects->pinterest_link;?>" title="Pinterest">
+                                 <img src="<?php echo $this->getSkinUrl('images/printrest.png');?>" />
+                              </a>
+                           </li>                           
+                           <?php }if($social_link_objects->google_link != ''){?>
+                           <li>
+                              <a href="<?php echo $social_link_objects->google_link;?>" title="Google+">
+                                 <img src="<?php echo $this->getSkinUrl('images/google.png');?>" />
+                              </a>
+                           </li>
+                           <?php }?>
+                           <!-- More services -->
+                        </ul>			
+		</div>
+        <?php }?>
+		<div class="row">
+			<?php echo $this->getChildHtml('footercontent') ?> 
+		</div>
+    </footer>
+</div>
+<?php if($helperObj->getThemeData('analytics'))
+    echo $helperObj->getThemeData('analytics');
+?>
