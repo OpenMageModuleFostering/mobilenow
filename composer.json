@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/mobilenow",
+    "name": "OpenMageModuleFostering\/mobilenow",
     "type": "magento-module",
     "license": "Custom-License",
     "homepage": "",
     "description": "MobileNow is a mobile theming platform for Magento Commerce.",
     "authors": [
-    {
-        "name": "Redstage, LLC \/ MobileNowApp.com",
-        "email": "info@mobilenowapp.com"
-    }
-],
+        {
+            "name": "Redstage, LLC \/ MobileNowApp.com",
+            "email": "info@mobilenowapp.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
